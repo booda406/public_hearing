@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @hearing_conference.title %>
+</p>
+
+<p>
+  <strong>Happen date:</strong>
+  <%= @hearing_conference.happen_date %>
+</p>
+
+<p>
+  <strong>Count:</strong>
+  <%= @hearing_conference.count %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @hearing_conference.category_id %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @hearing_conference.location %>
+</p>
+
+<p>
+  <strong>Wiki:</strong>
+  <%= @hearing_conference.wiki %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @hearing_conference.description %>
+</p>
+
+<%= link_to 'Edit', edit_hearing_conference_path(@hearing_conference) %> |
+<%= link_to 'Back', hearing_conferences_path %>

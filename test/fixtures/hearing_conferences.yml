@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  happen_date: 2014-04-24
+  count: 1
+  category_id: 1
+  location: MyString
+  wiki: MyText
+  description: MyText
+
+two:
+  title: MyString
+  happen_date: 2014-04-24
+  count: 1
+  category_id: 1
+  location: MyString
+  wiki: MyText
+  description: MyText
