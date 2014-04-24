@@ -1,4 +1,4 @@
-<%= form_for(@hearing_conference) do |f| %>
+<%= simple_form_for(@hearing_conference) do |f| %>
   <% if @hearing_conference.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@hearing_conference.errors.count, "error") %> prohibited this hearing_conference from being saved:</h2>
@@ -39,6 +39,7 @@
     <%= f.label :description %><br>
     <%= f.text_area :description %>
   </div>
+  <%= f.input :tag_list, :input_html => { :data => { :role => "tagsinput" }}, :label => "標籤" %>
   <div class="actions">
     <%= f.submit %>
   </div>

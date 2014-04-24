@@ -25,6 +25,7 @@ class HearingConferencesController < ApplicationController
   # POST /hearing_conferences.json
   def create
     @hearing_conference = HearingConference.new(hearing_conference_params)
+    @hearing_conference.tag_list = params[:hearing_conference][:tag_list]
 
     respond_to do |format|
       if @hearing_conference.save
