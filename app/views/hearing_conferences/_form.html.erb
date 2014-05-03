@@ -39,8 +39,14 @@
     <%= f.label :description %><br>
     <%= f.text_area :description %>
   </div>
-  <%= f.input :tag_list, :input_html => { :data => { :role => "tagsinput" }}, :label => "標籤" %>
+  <%= f.input :tag_list, :input_html => { :id => 'tags_1', :data => { :role => "tagsinput" }}, :label => "標籤" %>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#tags_1').tagsinput('items');
+  });
+</script>

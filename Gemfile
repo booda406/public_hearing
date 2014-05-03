@@ -20,6 +20,9 @@ gem 'therubyracer', platforms: :ruby
 
 gem 'simple_form'
 
+# login
+gem 'omniauth-facebook'
+
 # tag
 gem 'acts-as-taggable-on'
 gem 'bootstrap-tagsinput-rails'
