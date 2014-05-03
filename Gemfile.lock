@@ -8,6 +8,14 @@ GIT
       rails (>= 3.1)
       railties (>= 3.1)
 
+GIT
+  remote: https://github.com/galetahub/ckeditor.git
+  revision: 9e35addb42b42c7d520bbb579ecdb3d89d6a5847
+  specs:
+    ckeditor (4.0.11)
+      mime-types
+      orm_adapter (~> 0.5.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -41,6 +49,11 @@ GEM
     bootstrap-tagsinput-rails (0.3.2.0)
       railties (>= 3.1)
     builder (3.1.4)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -76,6 +89,8 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
+    mini_magick (3.7.0)
+      subexec (~> 0.2.1)
     minitest (4.7.5)
     multi_json (1.9.2)
     multipart-post (1.2.0)
@@ -93,6 +108,7 @@ GEM
     omniauth-oauth2 (1.1.1)
       oauth2 (~> 0.8.0)
       omniauth (~> 1.0)
+    orm_adapter (0.5.0)
     polyglot (0.3.4)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -136,6 +152,7 @@ GEM
       activesupport (>= 3.0)
       sprockets (~> 2.8)
     sqlite3 (1.3.9)
+    subexec (0.2.3)
     therubyracer (0.12.1)
       libv8 (~> 3.16.14.0)
       ref
@@ -158,10 +175,13 @@ PLATFORMS
 DEPENDENCIES
   acts-as-taggable-on
   bootstrap-tagsinput-rails
+  carrierwave
+  ckeditor!
   coffee-rails (~> 4.0.0)
   jbuilder (~> 1.2)
   jquery-rails
   less-rails
+  mini_magick
   omniauth-facebook
   rails (= 4.0.1)
   sass-rails (~> 4.0.0)

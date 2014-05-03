@@ -1,4 +1,6 @@
 PublicHearing::Application.routes.draw do
+  resources :posts
+
   resources :hearing_conferences
   
   get 'auth/:provider/callback', to: 'sessions#create'

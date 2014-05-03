@@ -15,4 +15,6 @@
 //= require turbolinks
 //= require twitter/bootstrap
 //= require bootstrap-tagsinput
+//= require ckeditor/override
+//= require ckeditor/init
 //= require_tree .

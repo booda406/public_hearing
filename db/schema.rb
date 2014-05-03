@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140503151533) do
+ActiveRecord::Schema.define(version: 20140503162534) do
 
   create_table "hearing_conferences", force: true do |t|
     t.string   "title"
@@ -23,6 +23,16 @@ ActiveRecord::Schema.define(version: 20140503151533) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "posts", force: true do |t|
+    t.integer  "public_hearing_id"
+    t.string   "user_id"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "title"
+    t.string   "cover_photo"
   end
 
   create_table "taggings", force: true do |t|

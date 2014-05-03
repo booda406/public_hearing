@@ -23,6 +23,13 @@ gem 'simple_form'
 # login
 gem 'omniauth-facebook'
 
+# article editor
+gem 'ckeditor', :git => 'https://github.com/galetahub/ckeditor.git' 
+
+# image upload
+gem "carrierwave"
+gem "mini_magick"
+
 # tag
 gem 'acts-as-taggable-on'
 gem 'bootstrap-tagsinput-rails'
