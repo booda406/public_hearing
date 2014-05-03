@@ -52,11 +52,6 @@
 
 <script type="text/javascript">
   $(document).ready(function(){
-    $('#tags_1').tagsinput({
-      tagClass: function(item) {
-        item.style.color="blue";
-        return (item.length > 10 ? 'big' : 'small');
-      }
-    });
+    $('#tags_1').tagsinput('item');
   });
 </script>
