@@ -11,10 +11,10 @@
 // about supported directives.
 //
 //= require jquery
+//= require ckeditor/override
+//= require ckeditor/init
 //= require jquery_ujs
 //= require turbolinks
 //= require twitter/bootstrap
 //= require bootstrap-tagsinput
-//= require ckeditor/override
-//= require ckeditor/init
 //= require_tree .

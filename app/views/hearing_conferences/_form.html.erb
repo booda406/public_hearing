@@ -1,3 +1,8 @@
+<style type="text/css">
+  .tag{
+    background-color: #0099CC;
+  }
+</style>
 <%= simple_form_for(@hearing_conference) do |f| %>
   <% if @hearing_conference.errors.any? %>
     <div id="error_explanation">
@@ -47,6 +52,11 @@
 
 <script type="text/javascript">
   $(document).ready(function(){
-    $('#tags_1').tagsinput('items');
+    $('#tags_1').tagsinput({
+      tagClass: function(item) {
+        item.style.color="blue";
+        return (item.length > 10 ? 'big' : 'small');
+      }
+    });
   });
 </script>
