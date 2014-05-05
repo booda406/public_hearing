@@ -18,4 +18,3 @@
 //= require twitter/bootstrap
 //= require bootstrap-tagsinput
 //= require_tree .
-//= require turbolinks
