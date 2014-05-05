@@ -17,11 +17,11 @@
   
   </div><div class="field">
     <%= f.label :cover_photo %><br>
-    <%= f.file_field :photo %>
+    <%= f.file_field :cover_photo %>
   </div>
   
   <div class="field">
-    <%= f.input :content, :as => :ckeditor, :input_html => { :ckeditor => { :height => 400 } } %>
+    <%= f.input :content, :as => :ckeditor, :input_html => { :ckeditor => { :height => 400, :toolbar => 'mini' } } %>
   </div>
 
   <div class="actions">

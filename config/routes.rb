@@ -1,4 +1,8 @@
 PublicHearing::Application.routes.draw do
+
+  mount Ckeditor::Engine => "/ckeditor"
+
+
   resources :posts
 
   resources :hearing_conferences
