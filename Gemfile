@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.1'
+gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
 group :development do
@@ -37,7 +37,8 @@ gem "carrierwave"
 gem "mini_magick"
 
 # tag
-gem 'acts-as-taggable-on'
+gem 'acts-as-taggable-on', '~> 3.1.1'
+# gem 'bootstrap-sass'
 gem 'bootstrap-tagsinput-rails'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/booda406/twitter-bootstrap-rails.git'
 gem 'less-rails'

@@ -15,7 +15,6 @@
 //= require ckeditor/override
 //= require ckeditor/init
 //= require jquery_ujs
-//= require twitter/bootstrap
-//= require bootstrap-tagsinput
 //= require_tree .
 //= require turbolinks
+//= require bootstrap-tagsinput
