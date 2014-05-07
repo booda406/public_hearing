@@ -15,6 +15,7 @@ end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
@@ -39,6 +40,9 @@ gem "mini_magick"
 # tag
 gem 'acts-as-taggable-on', '~> 3.1.1'
 gem 'bootstrap-sass'
+group :development do
+  gem 'rails_layout'
+end
 gem 'bootstrap-tagsinput-rails'
 # gem 'twitter-bootstrap-rails', :git => 'git://github.com/booda406/twitter-bootstrap-rails.git'
 # gem 'less-rails'
