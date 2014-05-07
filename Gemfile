@@ -38,10 +38,10 @@ gem "mini_magick"
 
 # tag
 gem 'acts-as-taggable-on', '~> 3.1.1'
-# gem 'bootstrap-sass'
+gem 'bootstrap-sass'
 gem 'bootstrap-tagsinput-rails'
-gem 'twitter-bootstrap-rails', :git => 'git://github.com/booda406/twitter-bootstrap-rails.git'
-gem 'less-rails'
+# gem 'twitter-bootstrap-rails', :git => 'git://github.com/booda406/twitter-bootstrap-rails.git'
+# gem 'less-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140505191856) do
+ActiveRecord::Schema.define(version: 20140507105707) do
 
   create_table "ckeditor_assets", force: true do |t|
     t.string   "data_file_name",               null: false
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20140505191856) do
   create_table "hearing_conferences", force: true do |t|
     t.string   "title"
     t.date     "happen_date"
-    t.integer  "count"
+    t.integer  "count",       default: 0
     t.integer  "category_id"
     t.string   "location"
     t.text     "wiki"
@@ -65,7 +65,8 @@ ActiveRecord::Schema.define(version: 20140505191856) do
   add_index "taggings", ["taggable_id", "taggable_type", "context"], name: "index_taggings_on_taggable_id_and_taggable_type_and_context"
 
   create_table "tags", force: true do |t|
-    t.string "name"
+    t.string  "name"
+    t.integer "taggings_count", default: 0
   end
 
   create_table "users", force: true do |t|

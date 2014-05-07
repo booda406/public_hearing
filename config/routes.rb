@@ -5,7 +5,9 @@ PublicHearing::Application.routes.draw do
 
   resources :posts
 
-  resources :hearing_conferences
+  resources :hearing_conferences do
+    resources :posts
+  end
   
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')

@@ -3,7 +3,7 @@ class CreateHearingConferences < ActiveRecord::Migration
     create_table :hearing_conferences do |t|
       t.string :title
       t.date :happen_date
-      t.integer :count
+      t.integer :count, :default => 0
       t.integer :category_id
       t.string :location
       t.text :wiki

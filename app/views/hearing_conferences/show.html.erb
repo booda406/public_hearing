@@ -36,7 +36,8 @@
 </p>
 
 <%= link_to 'Edit', edit_hearing_conference_path(@hearing_conference) %> |
-<%= link_to 'Back', hearing_conferences_path %>
+<%= link_to 'Back', hearing_conferences_path %> |
+<%= link_to '新專文', new_hearing_conference_post_path(:hearing_conference_id => params[:id]) %>
 
  <div id="disqus_thread"></div>
  <!-- AddThis Button BEGIN -->
