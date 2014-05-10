@@ -29,6 +29,7 @@ gem 'simple_form'
 
 # login
 gem 'omniauth-facebook'
+gem 'oauth2', '~> 0.9.3'
 
 # article editor
 gem 'ckeditor', :git => 'https://github.com/galetahub/ckeditor.git' 
