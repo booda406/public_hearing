@@ -181,6 +181,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   jquery-turbolinks
+  jwt (~> 0.1.11)
   mini_magick
   omniauth-facebook
   pg
