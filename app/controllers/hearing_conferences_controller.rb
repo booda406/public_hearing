@@ -41,6 +41,8 @@ class HearingConferencesController < ApplicationController
   # PATCH/PUT /hearing_conferences/1
   # PATCH/PUT /hearing_conferences/1.json
   def update
+    @hearing_conference.tag_list = params[:hearing_conference][:tag_list]
+    
     respond_to do |format|
       if @hearing_conference.update(hearing_conference_params)
         format.html { redirect_to @hearing_conference, notice: 'Hearing conference was successfully updated.' }

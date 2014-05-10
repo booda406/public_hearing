@@ -3,7 +3,7 @@
     <% @posts.each do |post| %>
   <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 pin_space">
         <h2 class="text-center"><%= link_to post.title, post %></h2>
-        <%= link_to image_tag(post.cover_photo), post, :class => "img-thumbnail img_padding" %>
+        <%= link_to image_tag(post.cover_photo), post, :class => "img-thumbnail" %>
           <!-- <%= link_to 'Show', post %> -->
           <!-- <%= link_to 'Edit', edit_post_path(post) %> -->
           <!-- <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %> -->
