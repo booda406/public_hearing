@@ -62,7 +62,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'jwt', '~> 0.1.11'
+# gem 'jwt', '~> 0.1.11'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
