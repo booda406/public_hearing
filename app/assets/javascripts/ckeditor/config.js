@@ -10,7 +10,7 @@ CKEDITOR.editorConfig = function( config )
         '/',
         { name: 'styles', items : [ 'Styles','Format' ] },
         { name: 'links', items : [ 'Link','Unlink' ] },
-       	['Bold','Italic','Underline','Strike'], ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'],
+        ['Bold','Italic','Underline','Strike'], ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'],
         { name: 'tools', items : [ 'Maximize' ] }
     ];
 }

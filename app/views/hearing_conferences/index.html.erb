@@ -5,14 +5,7 @@
     <tr>
       <th>Title</th>
       <th>Happen date</th>
-      <th>Count</th>
-      <th>Category</th>
       <th>Location</th>
-      <th>Wiki</th>
-      <th>Description</th>
-      <th></th>
-      <th></th>
-      <th></th>
     </tr>
   </thead>
 
@@ -21,11 +14,8 @@
       <tr>
         <td><%= hearing_conference.title %></td>
         <td><%= hearing_conference.happen_date %></td>
-        <td><%= hearing_conference.count %></td>
-        <td><%= hearing_conference.category_id %></td>
         <td><%= hearing_conference.location %></td>
-        <td><%= hearing_conference.wiki %></td>
-        <td><%= hearing_conference.description %></td>
+        <td><%= hearing_conference.tag_list %></td>
         <td><%= link_to 'Show', hearing_conference %></td>
         <td><%= link_to 'Edit', edit_hearing_conference_path(hearing_conference) %></td>
         <td><%= link_to 'Destroy', hearing_conference, method: :delete, data: { confirm: 'Are you sure?' } %></td>
