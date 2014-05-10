@@ -14,3 +14,33 @@
  *= require_self
  *= require bootstrap-tagsinput
  */
+
+ body{
+ 	background-color: #cccccc;
+ }
+ main {
+ 	min-height: 550px;
+ 	background-color: #cccccc;
+ }
+ nav{
+ 	margin-top: 10px;
+ }
+ .navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+}
+ .navbar .navbar-collapse {
+  text-align: center;
+}
+.navbar-default .navbar-nav > li{
+	border: 0 none;
+    font-size: 100%;
+    margin: 0 15px;
+}
+.navbar-default .navbar-nav > li > a{
+	color: black;
+    font-weight: bold;
+}
+.nav > li > a > img{
+	margin-top: -15px;
+}

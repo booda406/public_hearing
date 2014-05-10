@@ -1,7 +1,13 @@
 <%# add navigation links to this file %>
+      <li><%= link_to "公聽會搜尋", search_path %></li>
+      <li><%= link_to "戰況分析", posts_path %></li>
+      <li><%= link_to image_tag('logo.png', class: 'root-image'), root_path, class: 'navbar-brand' %></li>
+	  <li><%= link_to "消息通報", report_path %></li>
+          
 	<% if current_user %>
-        Signed in as <strong><%= current_user.name %></strong>!
+        <p class="navbar-text"><strong><%= current_user.name %></strong>軍師你好!</p>
         <%= link_to "Sign out", signout_path, id: "sign_out" %>
     <% else %>
-        <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+        <li><%= link_to "facebook登入", "/auth/facebook", id: "sign_in" %></li>
     <% end %>
+
