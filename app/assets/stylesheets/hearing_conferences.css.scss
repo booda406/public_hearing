@@ -1,3 +1,145 @@
 // Place all the styles related to the hearing_conferences controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.newsWall {
+	padding: 60px 0px 100px 0px;
+}
+
+.topNews {
+   /*border: 1px solid green;*/
+  column-count:2;
+  -moz-column-count:2; /* Firefox */
+  -webkit-column-count:2; /* Safari and Chrome */
+  background: black;
+  margin: 30px;
+}
+
+
+.topNews img {
+  margin: 0 auto;
+  padding: 0 auto;
+  /*width: 80%;*/
+  height: 60%;
+}
+
+.viedo {
+  color: white;
+  background: black;
+  /*border: 1px solid blue;*/
+  /*margin: 50px auto;*/
+  padding: 30px;
+  width: 100%;
+  height: 60%;
+  letter-spacing: 2px;
+  
+}
+
+.data div{
+	font-size: 20px;
+	line-height: 30px;
+	letter-spacing: 3px;
+}
+
+.text {
+	padding: 10px;
+}
+
+.row {
+	margin: 50px 50px 50px 70px;
+}
+
+
+.forum {
+	padding: 60px 0px 100px 0px;
+}
+
+.forum div{
+  font-size: 1em;
+  border: 1px solid blue;
+  margin: 10px 0px 10px 0px;
+  padding: 40px;
+}
+
+#tab1 {
+	background: black;
+}
+
+::selection { background: transparent; }
+/* TABS FRAME */
+.tabs-frame {
+  position: absolute;
+  width: 250px; height: 50px; /* ADD 50px TO WIDTH FOR EVERY TAB */
+  margin: auto;
+  display: block;
+}
+/* TABS */
+.tabs-frame .tab {
+  position: relative;
+  float: left;
+  width: 50px; height: 50px;
+  display: block;
+}
+/* TABS RADIO */
+.tabs-frame .tab .radio { display: none; }
+.tabs-frame .tab .tab-button {
+  cursor: pointer;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 15px; height: 15px;
+  margin: auto;
+  border-radius: 100%;
+  border: 0 double #FFF;
+  background: #FFF;
+  display: block;
+  
+  -webkit-transition: .15s linear;
+}
+.tabs-frame .tab .radio:checked + .tab-button {
+  border: 6px double #FFF;
+  background: #FC6E51;
+}
+.tabs-frame .tab .tab-button:hover {
+  background: #FC6E51;
+}
+/* TABS FRAME */
+.tabs-frame .tab .tab-frame {
+  position: absolute;
+  top: 100%; 
+  width: 600px;
+  border-radius: 5px;
+  background: #FFF;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 0;
+  
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, .3);
+  
+  -webkit-transition: opacity .3s linear,
+                      -webkit-transform .3s linear;
+  
+  -webkit-transform: rotate(-45deg) translate(25%, -25%);
+}
+.tabs-frame .tab .tab-frame:before {
+  content: '';
+  position: absolute;
+  top: -6px; left: 0; right: 0;
+  width: 0; height: 0;
+  margin: auto;
+  border-width: 0 6px 6px;
+  border-style: solid;
+  border-color: transparent transparent #FFF;
+  display: block;
+}
+.tabs-frame .tab .radio:checked ~ .tab-button ~ .tab-frame {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+  
+  -webkit-transform: rotate(0deg) translate(0, 0);  
+}
+.tabs-frame .tab .tab-frame p {
+  padding: 0 20px; margin: 20px 0;
+}
+

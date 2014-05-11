@@ -1,43 +1,215 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE HTML>
 
-<p>
-  <strong>Title:</strong>
-  <%= @hearing_conference.title %>
-</p>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta charset="utf-8">
+        
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-responsive.css" rel="stylesheet">
+        <link href="css/carousel.css" rel="stylesheet">
+        <link href="css/menu.css" rel="stylesheet">
 
-<p>
-  <strong>Happen date:</strong>
-  <%= @hearing_conference.happen_date %>
-</p>
 
-<p>
-  <strong>Count:</strong>
-  <%= @hearing_conference.count %>
-</p>
 
-<p>
-  <strong>Category:</strong>
-  <%= @hearing_conference.category_id %>
-</p>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/menu.js"></script>
+        <script src="js/pb.js"></script>
 
-<p>
-  <strong>Location:</strong>
-  <%= @hearing_conference.location %>
-</p>
+            <title>Hello, here is public hearing.</title>
 
-<p>
-  <strong>Wiki:</strong>
-  <%= @hearing_conference.wiki %>
-</p>
+        <link rel="stylesheet" type="text/css" href="css/pb.css">
 
-<p>
-  <strong>Description:</strong>
-  <%= @hearing_conference.description %>
-</p>
 
-<%= link_to 'Edit', edit_hearing_conference_path(@hearing_conference) %> |
-<%= link_to 'Back', hearing_conferences_path %> |
-<%= link_to '新專文', new_hearing_conference_post_path(:hearing_conference_id => params[:id]) %>
+    </head>
+    
+    <body>
+    <nav> </nav>
+    <div class="container marketing">
+
+        <section class ="newsWall">
+            <div class="topNews">
+            <img src="http://twimg.edgesuite.net/images/ReNews/20140330/640_88c4df05cb68a4588db46f06267e1cba.jpg"/>
+            <div class="viedo"> VIEDO沒影片的我晚點再寫喲>_^ </div>
+            
+            </div>
+
+            <div class="data"> 
+              <h1> 第三場 醫療、技術檢測與分析服務業、社會服務業、醫療器材 </h1>
+              <div> 時間：102年10月2日（星期三）9時4分至12時17分 <br> 地點：紅樓202會議室 <br> 主席：張委員慶忠<br>立法院第8屆第4會期內政、外交及國防、經濟、財政、教育及文化、交通、司法及法制、社會福利及衛生環境八委員會「海峽兩岸服務貿易協議」公聽會（第一場）會議紀錄
+
+
+
+              </div>
+
+            </div>
+        </section>
+
+        <section class="text">
+            <div id="menu">
+              <ul>
+                <li><a class="hover_tab" href="#tab1">逐字稿</a></li>
+                <li><a href="#tab2">問題集</a></li>
+                <li><a href="#tab3">目前支援狀況</a></li>
+                <li><a href="#tab4">Wiki</a></li>
+                <li><a href="#tab5">HACKPAD</a></li>
+              </ul>
+            </div>
+            <div style="clear:both"></div>
+            <div id="txt_cont">
+              <div class="txt_tab" id="tab1">
+                <!-- TABS FRAME -->
+                <section class="tabs-frame">
+                  <!-- TAB 1 -->
+                  <article class="tab">
+                    <input type="radio" id="tab_1" class="radio" name="tab_group_1" />
+                    <label for="tab_1" class="tab-button"></label>
+                    <section id="tab_frame_1" class="tab-frame">
+                      <p>　這是我對兩岸服貿協議做第一次發言，看到服貿協議的內容，事實上涵蓋範圍非常廣泛，同時服務業佔醫療產業或我們目前從事的產業中比例是很高的，據我所知，這與在大陸地區發展的情況是完全不對等的，我們從事這行業有三方面，第一是租賃業，第二是經銷代理業，全國聯合會主要也就是從事所有醫療相關用品的經銷或買賣，也就是我們過去所了解貿易的行業，與生產製造業完全是兩回事，第三，我們從事的是一種通路業，目前在日用品或醫療用品已經慢慢形成通路，已經建構了服務平台。</p>
+                    </section>
+                  </article>
+                  <!-- TAB 2 -->
+                  <article class="tab">
+                    <input type="radio" id="tab_2" class="radio" name="tab_group_1" />
+                    <label for="tab_2" class="tab-button"></label>
+                    <section id="tab_frame_2" class="tab-frame">
+                      <p>其次，在決策過程，亦即我們產品或生意要推廣時，事實上經過的路徑是完全不同，目前在台灣大部分是以中小企業為主，商業交易模式是開放的平台，也就是在取得機會的同時，決策者的模式是不同的，基本上是符合資格後，就以價格來決定是否取得該筆生意，但是在大陸的情況則是大不相同，人治色彩濃厚，我們在醫療法規等條件都不了解，或是過程都不同的情況下開放，未來將會有較大的衝擊，原因就是在決策的過程中，大陸的考量是比較長遠的，要維持生意一定會先考慮是否賺錢，如果大陸的政策是以資金導入，以長期策略考量來看，那進入這產業的門檻是相對非常低的，也就是說他可以忍受比較長遠的虧損來取得市場占有率以及長期服務的機會，這樣對我國中小企業發展將有致命性的障礙與影響。</p>
+                    </section>
+                  </article>
+                  <!-- TAB 3 -->
+                  <article class="tab">
+                    <input type="radio" id="tab_3" class="radio" name="tab_group_1" checked />
+                    <label for="tab_3" class="tab-button"></label>
+                    <section id="tab_frame_3" class="tab-frame">
+                      <p>第三，在經銷方面，過去在許多管理階層，無論產品內容、公司內容或代理內容，常常都是以香港、新加坡或台灣作管理人才的發展，但過去20年來，台灣人到大陸後，因為對岸是屬於人治社會且不開放的情況下，許多規定受到層層審批及考驗，要在行業中嶄露頭角，是相對困難的事，以上報告有關在長遠的策略上，顯然在決策的過程是不同的，再者在競爭上也相對是弱勢的，第三部分，如果要開放的話，雖然國家有國家的考量，但從長遠來說，我們應該知道，一旦開放後要再取消是不可能的，因此是否可以以對等方式辦理。在租賃業、通路業及經銷業上面的內容裡看到只有台灣開放，但對岸卻沒有開放，這一點是比較細節的部分，希望政府部門是不是審批這部分，要從小而大，而不是從大而小，這應該是不可為的，以上報告，謝謝。</p>
+                    </section>
+                  </article>
+                  <!-- TAB 4 -->
+                  <article class="tab">
+                    <input type="radio" id="tab_4" class="radio" name="tab_group_1" />
+                    <label for="tab_4" class="tab-button"></label>
+                    <section id="tab_frame_4" class="tab-frame">
+                      <p>曾億郎秘書：主席、各位委員。醫療市場在某種程度上是特殊性與半壟斷性的，並有進入性的障礙，因此相較於其他產業市場是有所不同的。在全世界各國，都有兩個行業是管制最嚴格的，第一就是銀行業，第二是醫療業，這是什麼緣故呢？這是因為一者管你的「錢」，另一者是管你的是「命」，因此這次要簽署服務貿易協議，就一定要相當審慎。以本次簽署的整個服務提供模式內容來看，第一，跨境提供服務，這原則上是不可行的，原因是醫療業不是隔空抓藥的，所以不可能提供跨境服務。第二，關於境外消費的問題，假若到大陸旅遊，勢必在遇到受傷狀況時，也必須要境外消費，這部分也是目前已經存在的。</p>
+                    </section>
+                  </article>
+                  <!-- TAB 5 -->
+                  <article class="tab">
+                    <input type="radio" id="tab_5" class="radio" name="tab_group_1" />
+                    <label for="tab_5" class="tab-button"></label>
+                    <section id="tab_frame_5" class="tab-frame">
+                      <p>而第四點的自然人呈現，原則上兩岸都不提供，大家所著重的是第三點，關於商業據點呈現這部分，先從大陸開放的地區來看，自2010年大陸公布「臺灣服務提供者在大陸設立獨資醫院管理暫行辦法」以後，允許在5個地區設立台資獨資醫院，到這次服貿協議開放4個直轄市及22個省會。大家以為這個餅很大，看的到也吃的到。大陸還有審批制度，不管是從中央部會還是省衛生廳審批，另外還有大陸有關醫療人員、藥物、保險制度的潛規則。所以，短期內能進入大陸市場並不容易。反觀台灣地區目前開放財團法人醫院投資相關規定，對此有兩點聲明，第一，規定內僅規範大陸地區人民與外國人擔任董事之人數合計不得超過董事會總額1/3，但對此要如何明確的執行，請相關主管官署作有效管理。</p>
+                    </section>
+                  </article>
+                </section>
+              </div>
+
+              <div class="txt_tab" id="tab2"><br>問：服貿通過，到底對身為醫師的我，好不好？<br><br>
+            答：首先，「開放與貿易自由化」不等於服貿，服貿也不等於黑箱服貿。......<br><br>
+ 
+              </div>
+              <div class="txt_tab" id="tab3">
+                <img style="float:left; margin:2px 6px 2px 0" src="http://quellidelcucuzzolo.altervista.org/demo/tab-menu-jquery/img/landscape.jpg" alt="" width="138" height="91" />攝影人員：3名（缺1人）<br>拍照人員：2名（缺1人）<br>代表提問人員：3名（缺人）<br>
+
+              </div>
+              <div class="txt_tab" id="tab4">《海峽兩岸服務貿易協議》（英語譯名：Cross-Strait Service Trade Agreement [1]，簡稱CSSTA），是海峽兩岸依據《海峽兩岸經濟合作架構協議》（簡稱ECFA）第四條所簽署的服務貿易協定。2011年3月，兩岸的經貿業務主管部門開始展開服務貿易磋商並達成共識。2012年8月9日舉行的兩岸兩會第八次高層會談上，雙方同意在達成關於該協議文本和市場開放項目的共識後正式簽署。2013年6月21日，兩岸兩會在中國大陸上海市舉行第九次高層會談並簽署該協議，也向外界公布了開放清單。在台灣，由於部分人士擔憂該協議可能使台灣在經濟與政治上更容易被相對缺乏自由的中國大陸影響，加上官方在該協議簽訂前對民間溝通不足，因而導致兩岸服務貿易協議存查爭議與太陽花學運的發生，也使該協議在台灣社會造成廣泛的爭議和討論。
+              </div>
+              <div class="txt_tab" id="tab5">
+               <script src="https://publichear.hackpad.com/kwerYO9jkiK.js"></script><noscript><div>View <a href="https://publichear.hackpad.com/kwerYO9jkiK">Welcome to hackpad - the collaborative notepad</a> on Hackpad.</div></noscript>
+              </div>
+            </div>
+        </section>
+
+        <section class="forum">
+          <div>
+            留言
+          </div>
+          <div>
+            留言
+          </div>
+          <div>
+            留言
+          </div>
+        </section>
+
+
+        <section class="nowArticle">
+            <h1> 現場專文 </h1>
+
+         <!-- Three columns of text below the carousel -->
+        <div class="row">
+            <div class="span3">
+                <img class="img-circle" src="http://i.imgur.com/9rBFY5N.png">
+                <h2>標題／作者一</h2>
+                <p>C'est le temps que tu as perdu pour ta rose qui fait ta rose si important.C'est le temps que tu as perdu pour ta rose qui fait ta rose si important.C'est le temps que tu as perdu pour ta rose. </p>
+                <p><a class="btn" href="#">View&raquo;</a></p>
+            </div>
+            <!-- /.span4 -->
+            <div class="span3">
+                <img class="img-circle" src="http://i.imgur.com/p1TdyQO.png" >
+                <h2>標題／作者二</h2>
+                <p>C'est le temps que tu as perdu pour ta rose qui fait ta rose si important.C'est le temps que tu as perdu pour ta rose qui fait ta rose si important.C'est le temps que tu as perdu pour ta rose. </p>
+                <p><a class="btn" href="#">View&raquo;</a></p>
+            </div>
+            <!-- /.span4 -->
+            <div class="span3">
+                <img class="img-circle" src="http://i.imgur.com/kACmMbb.png">
+                <h2>標題／作者三</h2>
+                <p>C'est le temps que tu as perdu pour ta rose qui fait ta rose si important.C'est le temps que tu as perdu pour ta rose qui fait ta rose si important.C'est le temps que tu as perdu pour ta rose.</p>
+                <p><a class="btn" href="#">View&raquo;</a></p>
+            </div>
+            <!-- /.span4 -->
+        </div>
+        <!-- /.row -->
+
+        </section>
+
+        <section class="seriesNews">
+            <h1> 系列與相關公聽會 </h1>
+
+         <!-- Three columns of text below the carousel -->
+        <div class="row">
+            <div class="span3">
+                <img class="img-circle" src="http://i.imgur.com/3o5inFs.png">
+                <h2>公聽會第六場 <br>證券、期貨及其相關服務業</h2>
+                <p>102年10月3日（星期四）15時3分至16時36分立法院第8屆第4會期內政、外交及國防、經濟、財政、教育及文化、交通、司法及法制、社會福利及衛生環境八委員會「海峽兩岸服務貿易協議」公聽會（第六場）會議紀錄
+
+                </p>
+                <p><a class="btn" href="#">View&raquo;</a></p>
+            </div>
+            <!-- /.span4 -->
+            <div class="span3">
+                <img class="img-circle" src="http://i.imgur.com/3o5inFs.png" >
+                <h2>公聽會第二場 <br>海運、公路運輸</h2>
+                <p>102年9月30日（星期一）14時34分至17時36分立法院第8屆第4會期內政、外交及國防、經濟、財政、教育及文化、交通、司法及法制、社會福利及衛生環境八委員會「海峽兩岸服務貿易協議」 
+                公聽會（第二場）會議紀錄</p>
+                <p><a class="btn" href="#">View&raquo;</a></p>
+            </div>
+            <!-- /.span4 -->
+            <div class="span3">
+                <img class="img-circle" src="http://i.imgur.com/3o5inFs.png">
+                <h2>公聽會第七場 <br>快遞、空運、貨物集散與承攬</h2>
+                <p>102年10月7日（星期一）9時1分至11時25分立法院第8屆第4會期內政、外交及國防、經濟、財政、教育及文化、交通、司法及法制、社會福利及衛生環境八委員會「海峽兩岸服務貿易協議」公聽會（第七場）會議紀錄
+                </p>
+                <p><a class="btn" href="#">View&raquo;</a></p>
+            </div>
+            <!-- /.span4 -->
+        </div>
+        <!-- /.row -->
+
+        </section>
+
+
+
+    </div>
+    </body>
+</html>
 
  <div id="disqus_thread"></div>
  <!-- AddThis Button BEGIN -->

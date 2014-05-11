@@ -1,14 +1,13 @@
 <h1>Listing posts</h1>
 
+<div class="row">
     <% @posts.each do |post| %>
-  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 pin_space">
+  <div class="col-xs-10 col-sm-5 col-sm-offset-1 col-md-3 col-lg-3 pin_space">
         <h2 class="text-center"><%= link_to post.title, post %></h2>
-        <%= link_to image_tag(post.cover_photo), post, :class => "img-thumbnail" %>
-          <!-- <%= link_to 'Show', post %> -->
-          <!-- <%= link_to 'Edit', edit_post_path(post) %> -->
-          <!-- <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %> -->
+        <%= link_to image_tag(post.cover_photo, class: "img-responsive img-thumbnail"), post, :class => "" %>
+        <div class="btn btn-info"><%= link_to post.hearing_conference.title, hearing_conference_path(post.hearing_conference_id) %></div>
+        <div class="tag"><%= link_to post.hearing_conference.title, hearing_conference_path(post.hearing_conference_id) %></div>
+
   </div>
     <% end %>
-
-<br>
-
+</div>

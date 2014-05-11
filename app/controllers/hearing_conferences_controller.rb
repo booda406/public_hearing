@@ -72,6 +72,6 @@ class HearingConferencesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def hearing_conference_params
-      params.require(:hearing_conference).permit(:title, :happen_date, :count, :category_id, :location, :wiki, :description)
+      params.require(:hearing_conference).permit(:title, :happen_date, :count, :category_id, :location, :wiki, :description, :photo)
     end
 end

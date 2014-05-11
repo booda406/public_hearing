@@ -1,2 +1,51 @@
-<h1>台灣公聽會，資訊百老匯</h1>
-<%= link_to "公聽會", hearing_conferences_path %>
+<div class="indexslider">
+<img src="/assets/index.jpg" title="publichearing" height="768">
+</div>
+<div class="container">
+
+       <div class="row">
+
+           <div class="col-lg-12">
+               <h1 class="page-header">公聽會
+                   <small>comming soon</small>
+               </h1>
+           </div>
+
+       </div>
+
+       <div class="row">
+			<% @hearingconferences.each do |conference| %>
+           <div class="col-md-3 portfolio-item">
+               <a href="portfolio-item.html">
+					<%= link_to image_tag(conference.photo), conference %>
+               </a>
+           </div>
+			<% end %>
+          
+
+       </div>
+
+       <div class="row">
+
+           <div class="col-lg-12">
+               <h1 class="page-header">人氣專文
+                   <small>Article</small>
+               </h1>
+           </div>
+
+       </div>
+
+<div class="row">
+			<% @posts.each do |post| %>
+           <div class="col-md-3 portfolio-item">
+               <a href="portfolio-item.html">
+				<%= link_to image_tag(post.cover_photo), post %>
+               </a>
+           </div>
+			<% end %>
+       </div>
+
+       <hr>
+
+ </div>
+   <!-- /.container -->

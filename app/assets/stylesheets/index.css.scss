@@ -1,0 +1,44 @@
+.indexslider{
+  width:100%;
+  height:768px;
+  background-color:#91AD70;
+}
+
+.publichear_row,
+.article_row{
+  width:100%;
+  height:300px;
+  margin:2em;
+}
+
+h1{
+  margin:0.5em;
+}
+
+.publichear{
+  float:left;
+  padding: 5px 5 5px 5;
+  margin:1em;
+  height:240px;
+  width:320px;
+  background-color:black;
+  
+}
+
+.article{
+  float:left;
+  padding: 5px 5 5px 5;
+  margin:1em;
+  height:240px;
+  width:320px;
+  background-color:black;
+}
+.black{
+  border:5px solid skyblue;
+  height:240px;
+  width:320px;
+}
+
+.black_up{
+  background-color:rgba(57,19,52,0);
+}
