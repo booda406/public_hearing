@@ -5,7 +5,7 @@
 	  <li><%= link_to "消息通報", report_path %></li>
           
 	<% if current_user %>
-        <p class="navbar-text"><strong><%= current_user.name %></strong>軍師你好!</p>
+        <p class="navbar-text"><strong><%= current_user.name %></strong>軍師你好!</p><%= current_user.image %>
         <%= link_to "Sign out", signout_path, id: "sign_out" %>
     <% else %>
         <li><%= link_to "facebook登入", "/auth/facebook", id: "sign_in" %></li>
