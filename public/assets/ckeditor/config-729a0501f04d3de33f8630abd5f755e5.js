@@ -14,3 +14,4 @@ CKEDITOR.editorConfig = function( config )
         { name: 'tools', items : [ 'Maximize' ] }
     ];
 }
+;
