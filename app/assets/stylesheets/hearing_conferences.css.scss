@@ -146,59 +146,6 @@
 // carousel
  /* GLOBAL STYLES
     -------------------------------------------------- */
-    /* Padding below the footer and lighter body text */
-
-    body {
-      padding-bottom: 40px;
-      color: #5a5a5a;
-    }
-
-
-
-    /* CUSTOMIZE THE NAVBAR
-    -------------------------------------------------- */
-
-    /* Special class on .container surrounding .navbar, used for positioning it into place. */
-    .navbar-wrapper {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 10;
-      margin-top: 20px;
-      margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
-    }
-    .navbar-wrapper .navbar {
-
-    }
-
-    /* Remove border and change up box shadow for more contrast */
-    .navbar .navbar-inner {
-      border: 0;
-      -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
-         -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
-              box-shadow: 0 2px 10px rgba(0,0,0,.25);
-    }
-
-    /* Downsize the brand/project name a bit */
-    .navbar .brand {
-      padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
-      font-size: 16px;
-      font-weight: bold;
-      text-shadow: 0 -1px 0 rgba(0,0,0,.5);
-    }
-
-    /* Navbar links: increase padding for taller navbar */
-    .navbar .nav > li > a {
-      padding: 15px 20px;
-    }
-
-    /* Offset the responsive button for proper vertical alignment */
-    .navbar .btn-navbar {
-      margin-top: 10px;
-    }
-
-
 
     /* CUSTOMIZE THE CAROUSEL
     -------------------------------------------------- */
@@ -384,3 +331,64 @@
 
     }
 // carousel finished
+
+// menu
+#menu{
+  float: right;
+  position: relative;
+  left: -50%;
+  text-align:left;
+}
+#menu ul{
+  position: relative;
+  left: 50%;
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+#menu li {
+  float:left;
+  position: relative;
+  margin: 0 2px 0 0;
+  border-bottom: 0;
+  width:176px;
+  text-align:center;
+}
+#menu li a {
+  text-decoration:none;
+  display:block;
+  padding: 8px 15px;
+  color: #ffffff;
+  font: 20px 'Trebuchet MS', Trebuchet, sans-serif;
+  border-radius: 10px 10px 0 0;
+  background-color: #2D5960;
+}
+#menu li a:hover {
+  background-color: #DBE4EA;
+  color: #0b5394;
+}
+#txt_cont{
+  position:relative;
+  width: 100%;
+  font: 20px 'Trebuchet MS', Trebuchet, sans-serif;
+  line-height:35px;
+  border:1px solid #ccc;
+  border-top: 0;
+  text-align: left;
+  /*left:40%;*/
+}
+.txt_tab{
+  padding:8px;
+  height: 15cm;
+}
+#menu ul li a.hover_tab{
+  background-color:#dbe4ea;
+  color:#0b5394;
+}
+// menu finished
+.span3{
+	width: 270px;
+	float: left;
+    margin-left: 30px;
+    min-height: 1px;
+}
