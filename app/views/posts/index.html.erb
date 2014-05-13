@@ -5,7 +5,6 @@
         <h2 class="text-center"><%= link_to post.title, post %></h2>
         <%= link_to image_tag(post.cover_photo, class: "img-responsive img-thumbnail"), post, :class => "" %>
         <div class="btn btn-info"><%= link_to post.hearing_conference.title, hearing_conference_path(post.hearing_conference_id) %></div>
-        <div class="tag"><%= link_to post.hearing_conference.title, hearing_conference_path(post.hearing_conference_id) %></div>
 
   </div>
     <% end %>
