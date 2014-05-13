@@ -1,7 +1,7 @@
 <%# add navigation links to this file %>
       <li><%= link_to "公聽會搜尋", search_path %></li>
       <li><%= link_to "戰況分析", posts_path %></li>
-      <li><%= link_to image_tag('logo.png', class: 'root-image'), root_path, class: 'navbar-brand' %></li>
+      <li><%= link_to image_tag('logo.png'), root_path, class: 'navbar-brand' %></li>
 	  <li><%= link_to "消息通報", report_path %></li>
           
 	<% if current_user %>
