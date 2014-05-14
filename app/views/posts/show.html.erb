@@ -2,5 +2,5 @@
 
 <%= raw(@post.content) %>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Edit', edit_hearing_conference_post_path(@post.hearing_conference_id,@post.id) %> |
 <%= link_to 'Back', posts_path %>
