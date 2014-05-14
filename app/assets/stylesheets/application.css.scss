@@ -16,11 +16,16 @@
  */
 
  body{
- 	background-color: #cccccc;
+  // background-color: #cccccc;
+  // background-repeat:repeat-x;
+  background-repeat:no-repeat;
+ 	background-image: url("background.jpg");
  }
  main {
- 	min-height: 550px;
- 	background-color: #cccccc;
+  background-image: url("background.jpg");
+  background-repeat:no-repeat;
+  min-height: 550px;
+ 	// background-color: #cccccc;
  }
  nav{
  	margin-top: 10px;
