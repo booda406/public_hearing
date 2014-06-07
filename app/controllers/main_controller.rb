@@ -16,7 +16,7 @@ class MainController < ApplicationController
 	def user_page
 		@user = User.find(params[:id])
 		@posts = Post.where(:user_id => @user.id)
-		@hearingconferences = @user.follows_by_type('HearingConference')
+		@hearingconferences = @user.following_by_type('HearingConference')
 		@users = @user.following_users
 	end
 

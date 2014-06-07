@@ -3,7 +3,7 @@
 
 <% @hearingconferences.each do |hearingconference| %>
 	<%= link_to hearingconference.title, hearingconference %>
-	<%= link_to image_tag(hearing_conference.photo), hearingconference %>
+	<%= link_to image_tag(hearingconference.photo), hearingconference %>
 <% end %>
 <% @users.each do |user| %>
 	<%= link_to user.name, user_page_path(user.id) %>
