@@ -12,4 +12,9 @@ class MainController < ApplicationController
 	def report
 		
 	end
+
+	def user_page
+		@posts = Post.where(:user_id => current_user.id)
+	end
+
 end

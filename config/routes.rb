@@ -23,6 +23,9 @@ PublicHearing::Application.routes.draw do
    get 'search' => 'main#search', as: 'search'
    get 'report' => 'main#report', as: 'report'
 
+   # for user
+   get '/users/:id' => 'main#user_page', as: 'user_page'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
