@@ -1,6 +1,14 @@
 class HearingConferencesController < ApplicationController
   before_action :set_hearing_conference, only: [:show, :edit, :update, :destroy]
 
+
+  def follow
+    @user = User.find(:user_id)
+    @hearing_conference = HearingConference.find(:hearing_conference_id)
+    @user.follow(@hearing_conference)
+    redirect_to @hearing_conference
+  end
+
   # GET /hearing_conferences
   # GET /hearing_conferences.json
   def index

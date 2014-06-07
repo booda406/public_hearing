@@ -1,5 +1,10 @@
+<% if !current_user.following?(@user)%><span><%= button_to "Follow", { action: "follow", id: current_user.id, user_id: @user.id } %></span><% end %>
+<%= @user.name %>
 
-Hello，<%= current_user.name %>!!
+<%= @user.follows_by_type('HearingConference') %>
+<%= @user.following_users %>
+
+
 
 <div class="row">
     <% @posts.each do |post| %>

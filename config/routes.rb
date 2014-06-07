@@ -8,6 +8,8 @@ PublicHearing::Application.routes.draw do
   resources :hearing_conferences do
     resources :posts
   end
+
+  post '/hearing_conferences/follow/:hearing_conference_id/:user_id' => 'hearing_conferences#follow'
   
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
@@ -25,7 +27,7 @@ PublicHearing::Application.routes.draw do
 
    # for user
    get '/users/:id' => 'main#user_page', as: 'user_page'
-
+   post '/users/follow/:id/:user_id' => 'main#follow'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -33,6 +33,9 @@ gem 'simple_form'
 gem 'omniauth-facebook'
 gem 'oauth2', '~> 0.9.3'
 
+# follow
+gem "acts_as_follower"
+
 # article editor
 gem 'ckeditor', :git => 'https://github.com/galetahub/ckeditor.git' 
 

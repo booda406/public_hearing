@@ -1,7 +1,7 @@
 
     <div class="container marketing">
         <section class ="newsWall">
-        <h1>戰役全記錄</h1>
+        <% if !current_user.following?(@hearing_conference)%><span><%= button_to "Follow", { action: "follow", hearing_conference_id: @hearing_conference.id, user_id: current_user.id } %></span><% end %><h1>戰役全記錄</h1>
             <div class="topNews">
             <img src="/assets/img6.jpg"/>
             <div class="viedo"> VIEDO沒影片的我晚點再寫喲>_^ </div>
