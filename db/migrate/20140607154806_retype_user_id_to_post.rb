@@ -1,5 +1,5 @@
 class RetypeUserIdToPost < ActiveRecord::Migration
   def change
-  	change_column :posts, :user_id, 'integer USING CAST(column_to_change AS integer)'
+  	change_column :posts, :user_id, 'integer USING CAST(user_id AS integer)'
   end
 end
