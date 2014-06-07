@@ -1,14 +1,12 @@
 <% if (!current_user.following?(@user) && current_user.id != @user.id) %><span><%= button_to "Follow", { action: "follow", id: current_user.id, user_id: @user.id } %></span><% end %>
-<%= @user.name %>
+<%= @user.name %><br>
 
+<div class="row">
 <% @hearingconferences.each do |hearingconference| %>
-	<%= link_to hearingconference.title, hearingconference %>
-	<%= link_to image_tag(hearingconference.photo), hearingconference %>
+  <div class="col-xs-10 col-sm-5 col-sm-offset-1 col-md-3 col-lg-3 pin_space">
+	<h2 class="text-center"><%= link_to hearingconference.title, hearingconference %></h2>
+	<%= link_to image_tag(hearingconference.photo, class: "img-responsive img-thumbnail"), hearingconference %>
 <% end %>
-<% @users.each do |user| %>
-	<%= link_to user.name, user_page_path(user.id) %>
-<% end %>
-
 
 <div class="row">
     <% @posts.each do |post| %>
@@ -20,3 +18,7 @@
   </div>
     <% end %>
 </div>
+
+<% @users.each do |user| %>
+	<%= link_to user.name, user_page_path(user.id) %>
+<% end %>
