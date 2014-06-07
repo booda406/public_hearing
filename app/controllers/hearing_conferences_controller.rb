@@ -3,8 +3,8 @@ class HearingConferencesController < ApplicationController
 
 
   def follow
-    @user = User.find(:user_id)
-    @hearing_conference = HearingConference.find(:hearing_conference_id)
+    @user = User.find(params[:user_id])
+    @hearing_conference = HearingConference.find(params[:hearing_conference_id])
     @user.follow(@hearing_conference)
     redirect_to @hearing_conference
   end
