@@ -1,5 +1,113 @@
-<% if (!current_user.following?(@user) && current_user.id != @user.id) %><span><%= button_to "Follow", { action: "follow", id: current_user.id, user_id: @user.id } %></span><% end %>
-<%= @user.name %><br>
+    <title>台灣公聽會，資訊百老匯─個人頁面</title>
+<style type="text/css">
+	body{
+    max-width: 1024px;
+    margin: 0 auto;
+    font-family: 微軟正黑體;
+}
+    
+.sidebar{
+    float: left;
+    position: fixed;
+    padding: 10px;
+}
+
+.content{
+    margin-left: 220px;
+    padding: 10px;
+}
+
+.follow{
+    text-align: center;
+    padding: 5px;
+    font-size: 1em;
+    width: 200px;
+    height: 40px;
+    background: #cc0000;
+    color: white;
+    border: none;
+    font-weight: bold;
+}
+
+.follow:hover{
+    background: #ff3333;
+}
+
+ul{
+    list-style: none;
+    line-height: 2em;
+    padding: 0 0 1em 0;
+    margin-bottom: 1em;
+    color: grey;
+}
+
+li{
+    border-bottom: 1px solid grey;
+    height: 3em;
+    text-align: center;
+    line-height: 3em;
+}
+
+ul li a{
+    text-decoration: none;
+    color: grey;
+}
+
+ul li:hover{
+    border-left: 3px solid #ff3333;
+    background: grey;
+}
+
+ul li a:hover{
+    color: black;
+}
+
+.article{
+    padding-top: 2em;
+    padding-bottom: 2em;
+    border-bottom: 1px solid grey;
+}
+</style>
+
+      <div class="sidebar">
+      
+          <div class="profilephoto">
+  			  <%= image_tag(@user.image) %>
+          </div>
+          <div class="username">
+              <h3><%= @user.name %></h3>
+          
+          </div>
+          <% if (!current_user.following?(@user) && current_user.id != @user.id) %><span><%= button_to "+Follow", { action: "follow", id: current_user.id, user_id: @user.id, class: "follow" } %></span>
+          <% end %>
+          <ul>
+          
+              <li><a href="ph_profile_history.html">觀點發表紀錄</a></li>
+              <li><a href="ph_profile_following.html">following</a>
+              	<ul>
+              	<% @users.each do |user| %>
+					<li><%= link_to user.name, user_page_path(user.id) %></li>
+			  	<% end %>
+			  	</ul>
+			  </li>
+          </ul>
+      
+      </div>
+      <div class="content">
+
+          <h1 class="pagename">觀點發表紀錄</h1>
+			<% @posts.each do |post| %>
+          <div class="article">
+          
+              <div class="time"><%= post.created_at.strftime("%F") %></div>
+              <div class="btn btn-info"><%= link_to post.hearing_conference.title, hearing_conference_path(post.hearing_conference_id) %></div>
+			  <h2 class="articletitle"><%= link_to post.title, post %></h2>
+              <div class="articlecontent"><%= raw(@post.content).truncate(50, :separator => " ").html_safe {link_to "繼續閱讀→", post} %></div>
+          
+          </div>
+		<% end %>
+      </div>
+
 
 <div class="row">
 <% @hearingconferences.each do |hearingconference| %>
@@ -9,18 +117,3 @@
   </div>
 <% end %>
 </div>
-
-<div class="row">
-    <% @posts.each do |post| %>
-  <div class="col-xs-10 col-sm-5 col-sm-offset-1 col-md-3 col-lg-3 pin_space">
-        <h2 class="text-center"><%= link_to post.title, post %></h2>
-        <%= link_to image_tag(post.cover_photo, class: "img-responsive img-thumbnail"), post, :class => "" %>
-        <div class="btn btn-info"><%= link_to post.hearing_conference.title, hearing_conference_path(post.hearing_conference_id) %></div>
-
-  </div>
-    <% end %>
-</div>
-
-<% @users.each do |user| %>
-	<%= link_to user.name, user_page_path(user.id) %>
-<% end %>
