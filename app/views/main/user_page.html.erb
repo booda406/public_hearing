@@ -1,6 +1,60 @@
     <title>台灣公聽會，資訊百老匯─個人頁面</title>
 <style type="text/css">
-	body{
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+    outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+    text-decoration: none;
+}
+del {
+    text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body{
+	padding-top: 60px;
     max-width: 1024px;
     margin: 0 auto;
     font-family: 微軟正黑體;
@@ -62,7 +116,7 @@ ul li a:hover{
     color: black;
 }
 
-.article{
+.post_article{
     padding-top: 2em;
     padding-bottom: 2em;
     border-bottom: 1px solid grey;
@@ -97,7 +151,7 @@ ul li a:hover{
 
           <h1 class="pagename">觀點發表紀錄</h1>
 			<% @posts.each do |post| %>
-          <div class="article">
+          <div class="post_article">
           
               <div class="time"><%= post.created_at.strftime("%F") %></div>
               <div class="btn btn-info"><%= link_to post.hearing_conference.title, hearing_conference_path(post.hearing_conference_id) %></div>
