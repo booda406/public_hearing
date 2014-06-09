@@ -102,6 +102,15 @@ li{
     line-height: 3em;
 }
 
+.profilephoto {
+	height: 200px;
+	width: 200px;
+}
+
+.leftbar {
+	width: 200px;
+}
+
 ul li a{
     text-decoration: none;
     color: grey;
@@ -136,11 +145,11 @@ ul li a:hover{
           <% end %>
           <ul>
           
-              <li><a href="ph_profile_history.html">觀點發表紀錄</a></li>
-              <li><a href="ph_profile_following.html">following</a>
+              <li class="leftbar" ><a href="ph_profile_history.html">觀點發表紀錄</a></li>
+              <li class="leftbar" ><a href="ph_profile_following.html">following</a>
               	<ul>
               	<% @users.each do |user| %>
-					<li><%= link_to user.name, user_page_path(user.id) %></li>
+					<li class="leftbar" ><%= link_to user.name, user_page_path(user.id) %></li>
 			  	<% end %>
 			  	</ul>
 			  </li>
