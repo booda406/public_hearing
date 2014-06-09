@@ -95,7 +95,7 @@ ul{
     color: grey;
 }
 
-.btn .leftbar {
+.btn, .leftbar {
     border-bottom: 1px solid grey;
     height: 3em;
     text-align: center;
@@ -134,7 +134,7 @@ a:hover{
 	background-color: #808080;
 }
 
-.leftbar :hover{
+.leftbar:hover{
     border-left: 3px solid #ff3333;
     background: grey;
 }
@@ -183,7 +183,7 @@ a:hover{
               <div class="time"><%= post.created_at.strftime("%F") %></div>
               <div class="btn btn-info"><%= link_to post.hearing_conference.title, hearing_conference_path(post.hearing_conference_id) %></div>
 			  <h2 class="articletitle"><%= link_to post.title, post %></h2>
-              <div class="articlecontent"><%= raw(post.content).truncate(100, :separator => " ").html_safe link_to "繼續閱讀→", post%></div>
+              <div class="articlecontent"><%= raw(post.content).truncate(100, :separator => " ").html_safe %><%= link_to "繼續閱讀→", post%></div>
           
           </div>
 		<% end %>
