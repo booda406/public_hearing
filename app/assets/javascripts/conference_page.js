@@ -14,9 +14,5 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require bootstrap
-//= require bootstrap-tagsinput
-//= require ckeditor/override
-//= require ckeditor/init
-//= require_tree ./ckeditor
-//= require_tree ./wowslider
+//= require_tree ./conference_page
 //= require turbolinks
