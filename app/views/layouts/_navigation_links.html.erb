@@ -4,19 +4,51 @@
   margin: 0;
   top:0px;
 }
-</style>     
-
-
+</style> 
 
       <li><%= link_to "公聽會搜尋", search_path %></li>
       <li><%= link_to "戰況分析", posts_path %></li>
-      <li><%= link_to image_tag('logo.png'), root_path, class: 'navbar-brand' %></li>
-	  <li><%= link_to "消息通報", report_path %></li>
+      <li><%= link_to image_tag('logo.png', id: "logo"), root_path, class: 'navbar-brand' %></li>
+	    <li><%= link_to "消息通報", report_path, id: "report"%></li>
           
-	<% if current_user %>
+	  <% if current_user %>
         <p class="navbar-text"><strong><%= link_to current_user.name, user_page_path(current_user.id) %></strong>軍師你好!<br><%= image_tag current_user.image, style: "display:inline-block" %>
         <%= link_to "登出", signout_path, id: "sign_out" %></p>
     <% else %>
         <li><%= link_to "facebook登入", "/auth/facebook", id: "sign_in" %></li>
     <% end %>
+
+
+<script>
+var mq = window.matchMedia( "(min-width: 768px)" );
+
+// media query event handler
+if (matchMedia) {
+  var mq = window.matchMedia("(min-width: 768px)");
+  mq.addListener(WidthChange);
+  WidthChange(mq);
+}
+
+// media query change
+function WidthChange(mq) {
+
+  if (mq.matches) {
+    // window width is at least 768px
+      $("#logo").attr("src","<%=asset_path('logo.png')%>");
+      console.log(<%=asset_path('logo.png')%>)
+      // $(".navbar-brand").text("");
+
+  }
+  else {
+    // window width is less than 768px
+      $("#logo").attr("src"," ");
+      $("#logo").attr("alt",'首頁');
+      $(".navbar-brand img").css("margin-top","0px");
+      $(".navbar-brand").parent().css("height","40px");
+      $(".navbar-brand").css({"width":"150px","height":"40px","padding":"10px 15px 10px 15px"});
+      $("#report").css("height","40px");
+  }
+
+}
+</script>    
 
