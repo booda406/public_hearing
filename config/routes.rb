@@ -28,6 +28,7 @@ PublicHearing::Application.routes.draw do
    # for user
    get '/users/:id' => 'main#user_page', as: 'user_page'
    post '/users/follow/:id/:user_id' => 'main#follow'
+   post '/users/unfollow/:id/:user_id' => 'main#unfollow'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

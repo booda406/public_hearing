@@ -73,7 +73,7 @@ body{
     text-align: center;
     padding: 5px;
     font-size: 1em;
-    width: 200px;
+    width: 100px;
     height: 40px;
     background: #cc0000;
     color: white;
@@ -83,6 +83,20 @@ body{
 
 .follow:hover{
     background: #ff3333;
+}
+
+.following{
+    text-align: center;
+    padding: 5px;
+    font-size: 1em;
+    width: 100px;
+    height: 40px;
+    background: #cf304b;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border: 1px solid black;
+    box-shadow: 3px 3px 5px 2px black inset;
 }
 
 ul {
@@ -172,7 +186,9 @@ ul {
               <h3><%= @user.name %></h3>
           
           </div>
-          <% if (!current_user.following?(@user) && current_user.id != @user.id) %><span><%= button_to "+Follow", { action: "follow", id: current_user.id, user_id: @user.id, class: "follow" } %></span>
+          <% if (!current_user.following?(@user) && current_user.id != @user.id) %><span><%= button_to "+Follow", { action: "follow", id: current_user.id, user_id: @user.id }, class: "follow" %></span>
+          <% elsif (current_user.following?(@user) && current_user.id != @user.id) %>
+          <%= button_to "Folllowing", { action: "unfollow", id:current_user.id, user_id: @user.id }, class: "following"  %>
           <% end %>
           <ul>
           

@@ -26,4 +26,10 @@ class MainController < ApplicationController
     	redirect_to user_page_path(@user.id)
 	end
 
+	def unfollow
+		@user = User.find(params[:user_id])
+		current_user.stop_following(@user)
+		redirect_to user_page_path(@user.id)
+	end
+
 end

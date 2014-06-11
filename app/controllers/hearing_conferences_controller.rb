@@ -17,7 +17,7 @@ class HearingConferencesController < ApplicationController
   # GET /hearing_conferences/1
   # GET /hearing_conferences/1.json
   def show
-    render layout: 'conference_page'
+    # render layout: 'conference_page'
   end
 
   # GET /hearing_conferences/new
