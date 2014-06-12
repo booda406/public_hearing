@@ -1,7 +1,6 @@
 class HearingConferencesController < ApplicationController
   before_action :set_hearing_conference, only: [:show, :edit, :update, :destroy]
 
-
   def follow
     @user = User.find(params[:user_id])
     @hearing_conference = HearingConference.find(params[:hearing_conference_id])
@@ -18,6 +17,7 @@ class HearingConferencesController < ApplicationController
   # GET /hearing_conferences/1
   # GET /hearing_conferences/1.json
   def show
+    # render layout: 'conference_page'
   end
 
   # GET /hearing_conferences/new

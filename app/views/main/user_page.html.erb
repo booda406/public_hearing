@@ -15,8 +15,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     padding: 0;
     border: 0;
     outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
     background: transparent;
 }
 body {
@@ -75,7 +73,7 @@ body{
     text-align: center;
     padding: 5px;
     font-size: 1em;
-    width: 200px;
+    width: 100px;
     height: 40px;
     background: #cc0000;
     color: white;
@@ -87,28 +85,53 @@ body{
     background: #ff3333;
 }
 
-ul{
+.following{
+    text-align: center;
+    padding: 5px;
+    font-size: 1em;
+    width: 100px;
+    height: 40px;
+    background: #8c8c8c;
+    color: white;
+    border: none;
+    font-weight: bold;
+}
+
+ul {
     list-style: none;
     line-height: 2em;
-    padding: 0 0 1em 0;
     margin-bottom: 1em;
     color: grey;
 }
 
-li{
+.btn, .leftbar {
     border-bottom: 1px solid grey;
-    height: 3em;
     text-align: center;
-    line-height: 3em;
+}
+
+.username h3 {
+	font-size: 2em;
+	line-height: 150%;
 }
 
 .profilephoto img{
-	height: 200px;
-	width: 200px;
+	height: 100px;
+	width: 100px;
 }
 
 .leftbar {
-	width: 200px;
+	width: 100px;
+}
+
+.leftbar a {
+	font-size: 1.2em;
+	line-height: 3em;
+}
+
+.leftbar a:hover {
+	text-decoration: none;
+	background-color: #808080;
+    color: black;
 }
 
 .pagename {
@@ -116,24 +139,33 @@ li{
 	font-weight: bold;
 }
 
-ul li a{
-    text-decoration: none;
-    color: grey;
-    font-size: 1.5em;
-	font-weight: bold;
+.articletitle {
+	line-height: 200%;
 }
 
-a:hover{
-	background-color: #808080;
+.articlecontent {
+	text-decoration: none;
 }
 
-ul li:hover{
+.post_article a {
+	font-size: 20px;
+}
+.post_article a:after {
+	color : rgb(254,254,254);
+}
+
+.btn {
+	background-color: #c12727;
+}
+
+.articlecontent span {
+	text-decoration: none;
+	font-size: 20px;
+}
+
+.leftbar:hover{
     border-left: 3px solid #ff3333;
     background: grey;
-}
-
-ul li a:hover{
-    color: black;
 }
 
 .post_article{
@@ -152,7 +184,9 @@ ul li a:hover{
               <h3><%= @user.name %></h3>
           
           </div>
-          <% if (!current_user.following?(@user) && current_user.id != @user.id) %><span><%= button_to "+Follow", { action: "follow", id: current_user.id, user_id: @user.id, class: "follow" } %></span>
+          <% if (!current_user.following?(@user) && current_user.id != @user.id) %><span><%= button_to "+Follow", { action: "follow", id: current_user.id, user_id: @user.id }, class: "follow" %></span>
+          <% elsif (current_user.following?(@user) && current_user.id != @user.id) %>
+          <%= button_to "Folllowing", { action: "unfollow", id:current_user.id, user_id: @user.id }, class: "following"  %>
           <% end %>
           <ul>
           
@@ -176,7 +210,8 @@ ul li a:hover{
               <div class="time"><%= post.created_at.strftime("%F") %></div>
               <div class="btn btn-info"><%= link_to post.hearing_conference.title, hearing_conference_path(post.hearing_conference_id) %></div>
 			  <h2 class="articletitle"><%= link_to post.title, post %></h2>
-              <div class="articlecontent"><%= raw(post.content).truncate(50, :separator => " ").html_safe {link_to "繼續閱讀→", post} %></div>
+              <div class="articlecontent"><%= raw(post.content).truncate(100, :separator => " ").html_safe %>
+              	<span text-align="right"><%= link_to "繼續閱讀→", post%></span></div>
           
           </div>
 		<% end %>

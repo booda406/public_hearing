@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140607163809) do
+ActiveRecord::Schema.define(version: 20140612134700) do
+
+  create_table "answers", force: true do |t|
+    t.string   "content"
+    t.integer  "hearing_conference_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "categories", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "ckeditor_assets", force: true do |t|
     t.string   "data_file_name",               null: false
@@ -42,6 +55,13 @@ ActiveRecord::Schema.define(version: 20140607163809) do
   add_index "follows", ["followable_id", "followable_type"], name: "fk_followables"
   add_index "follows", ["follower_id", "follower_type"], name: "fk_follows"
 
+  create_table "get_scores", force: true do |t|
+    t.integer  "score_id"
+    t.integer  "answer_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "hearing_conferences", force: true do |t|
     t.string   "title"
     t.date     "happen_date"
@@ -53,6 +73,12 @@ ActiveRecord::Schema.define(version: 20140607163809) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "photo"
+    t.integer  "event"
+    t.string   "law"
+    t.string   "president"
+    t.string   "organizer"
+    t.text     "participant"
+    t.text     "topics"
   end
 
   create_table "posts", force: true do |t|
@@ -64,6 +90,19 @@ ActiveRecord::Schema.define(version: 20140607163809) do
     t.string   "title"
     t.string   "cover_photo"
     t.integer  "count",                             default: 0
+  end
+
+  create_table "questions", force: true do |t|
+    t.string   "content"
+    t.integer  "hearing_conference_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "scores", force: true do |t|
+    t.integer  "count"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "taggings", force: true do |t|

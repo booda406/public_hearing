@@ -19,51 +19,50 @@
 <script type="text/javascript">
 $("#wowslider-container1").wowSlider({effect:"blinds",prev:"",next:"",duration:20*100,delay:20*100,width:1200,height:650,autoPlay:true,stopOnHover:false,loop:false,bullets:true,caption:true,captionEffect:"slide",controls:true,onBeforeStep:0,images:0});
 </script>
-<div class="container">
+ <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-3">
+          <img src="../assets/titleflag2.png" style=width:80%>
+        </div>
+      </div>
 
-       <div class="row">
-
-           <div class="col-lg-12">
-               <h1 class="page-header">公聽會
-                   <small>comming soon</small>
-               </h1>
-           </div>
-
-       </div>
-
-       <div class="row">
-			<% @hearingconferences.each do |conference| %>
+     <div class="row">
+      <% @hearingconferences.each do |conference| %>
            <div class="col-md-3 portfolio-item">
                <a href="portfolio-item.html">
-					<%= link_to image_tag(conference.photo), conference %>
+          <%= link_to image_tag(conference.photo), conference %>
+          <%= conference.title %>
+          <%= conference.happen_date %>
+          <% conference.tags.each do |tag| %>
+            <%= tag %>
+          <% end %>
                </a>
            </div>
-			<% end %>
-          
-
+      <% end %>
        </div>
+
+      <div class="row">
+        <div class="col-md-3">
+
+          <img src="../assets/titleflag1.png" style=width:80%>
+        </div>
+      </div>
 
        <div class="row">
-
-           <div class="col-lg-12">
-               <h1 class="page-header">人氣專文
-                   <small>Article</small>
-               </h1>
-           </div>
-
-       </div>
-
-<div class="row">
-			<% @posts.each do |post| %>
+      <% @posts.each do |post| %>
            <div class="col-md-3 portfolio-item">
                <a href="portfolio-item.html">
-				<%= link_to image_tag(post.cover_photo), post %>
+        <%= link_to image_tag(post.cover_photo), post %>
+        <%= post.title %>
                </a>
            </div>
-			<% end %>
+      <% end %>
        </div>
 
-       <hr>
+      <hr>
 
- </div>
-   <!-- /.container -->
+      <footer>
+        <p>&copy; Company 2014</p>
+      </footer>
+    </div> <!-- /container -->

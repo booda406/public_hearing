@@ -17,5 +17,6 @@
 //= require bootstrap-tagsinput
 //= require ckeditor/override
 //= require ckeditor/init
-//= require_tree .
+//= require_tree ./ckeditor
+//= require_tree ./wowslider
 //= require turbolinks

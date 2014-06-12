@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="zh-tw"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="zh-tw"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="zh-tw"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="zh-tw">
+<![endif]-->
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "公聽會" %></title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Public Hearing" %>">
+    
+    <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+    
+    <%= stylesheet_link_tag 'conference_page', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'conference_page', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <!--[if lt IE 10]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <script>
+    var slow_browser = true;
+    </script>
+    <![endif]-->
+
+  </head>
+  <body>
+    <header>
+      <%= render 'layouts/navigation' %>
+    </header>
+    <main role="main">
+       <%= render 'layouts/messages' %>
+       <%= yield %>
+    </main>
+  </body>
+</html>
