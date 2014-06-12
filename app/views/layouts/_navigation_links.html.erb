@@ -4,6 +4,16 @@
   margin: 0;
   top:0px;
 }
+
+.navbar .nav > li > a {
+  min-height: 72px;
+  padding-top: 26px;
+}
+
+.navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
+max-height: 72px;
+}
+
 </style> 
 
       <li><%= link_to "公聽會搜尋", search_path %></li>
@@ -35,18 +45,22 @@ function WidthChange(mq) {
   if (mq.matches) {
     // window width is at least 768px
       $("#logo").attr("src","<%=asset_path('logo.png')%>");
-      console.log(<%=asset_path('logo.png')%>)
-      // $(".navbar-brand").text("");
+      $("#logo").attr("alt",'');
+      $(".navbar-collapse").removeAttr('style');
+      console.log("OMG");
 
   }
   else {
     // window width is less than 768px
       $("#logo").attr("src"," ");
       $("#logo").attr("alt",'首頁');
+      $("#logo").css("padding-top","13px");
       $(".navbar-brand img").css("margin-top","0px");
       $(".navbar-brand").parent().css("height","40px");
       $(".navbar-brand").css({"width":"150px","height":"40px","padding":"10px 15px 10px 15px"});
       $("#report").css("height","40px");
+      $(".navbar-collapse").attr("style","max-height: 340px; height: 72px");
+
   }
 
 }
