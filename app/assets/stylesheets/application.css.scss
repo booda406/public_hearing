@@ -34,6 +34,7 @@
   min-height: 550px;
   border:none;
   margin:0;
+  padding-bottom:0;
  	// background-color: #cccccc;
  }
  nav{
@@ -58,9 +59,4 @@
 .nav > li > a > img{
 	margin-top: -15px;
 	max-height: 90px;
-}
-@media screen and (min-width: 1024px){
-  .container, main{
-    width: 1024px;
-  }
 }

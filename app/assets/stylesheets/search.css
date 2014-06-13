@@ -6,7 +6,6 @@
     margin-bottom:100px;
 }
 .right{
-    background-color:white;
 }
 
 hr{
@@ -61,7 +60,6 @@ hr{
 .Search_days p{
   letter-spacing:41px;
   margin-left:8px;
-  margin-top:-10px;
   margin-bottom:-2px;
   color:gray;
 }
@@ -201,7 +199,7 @@ input[type='range']::-moz-range-thumb {
    height: 35px;
    width:170px;
    overflow: hidden;
-  background:white;
+   background:white;
 }
 
 .Search_sort option{
@@ -210,8 +208,8 @@ input[type='range']::-moz-range-thumb {
 }
 
 .search_img{
-  height:300px;
-  width:100%;
+  height:251px;
+  width:335px;
 }
 
 .Search_time{
@@ -219,16 +217,18 @@ input[type='range']::-moz-range-thumb {
   font-size: 1.5em;
   color:white;
   background-color:#990000;
-  padding:10px 100px 10px 100px;
+  padding:10px 10px;
 }
 .Search_name{
-  padding-left:1.5em;
-  padding-right:1.5em;
   color:black;
+  margin-bottom: 30px;
 }
 .Search_select img{
   float:right;
   width:30px;
   height:30px;
   margin-bottom:-35px;
+}
+.search_a:hover{
+  color: black;
 }
