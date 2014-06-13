@@ -59,3 +59,8 @@
 	margin-top: -15px;
 	max-height: 90px;
 }
+@media screen and (min-width: 1024px){
+  .container, main{
+    width: 1024px;
+  }
+}
