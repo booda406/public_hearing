@@ -29,19 +29,22 @@ $("#wowslider-container1").wowSlider({effect:"blinds",prev:"",next:"",duration:2
 
      <div class="row">
       <% @hearingconferences.each do |conference| %>
-           <div class="col-md-3 portfolio-item">
-               <a href="portfolio-item.html">
-          <%= link_to image_tag(conference.photo), conference %>
-          <%= conference.title %>
-          <%= conference.happen_date %>
-          <% conference.tags.each do |tag| %>
-            <%= tag %>
-          <% end %>
-               </a>
-           </div>
-      <% end %>
-       </div>
+  
+          <div class="col-sm-8 col-sm-offset-2 col-md-3 col-md-offset-1">          
+            <%= link_to image_tag(conference.photo), conference,  class: 'img-circle' %>
+              <h2><%= conference.title %></h2>
+              <h4><%= conference.happen_date %><h4><br>
+              <ul class="tags" >
+              <% conference.tags.each do |tag| %>
+                <li><a class="tag"><%= tag %></a></li>
+              <% end %>
+              </ul>
 
+          </div>
+      <% end %>
+    </div>
+
+      <br>
       <div class="row">
         <div class="col-md-3">
 
@@ -51,12 +54,11 @@ $("#wowslider-container1").wowSlider({effect:"blinds",prev:"",next:"",duration:2
 
        <div class="row">
       <% @posts.each do |post| %>
-           <div class="col-md-3 portfolio-item">
-               <a href="portfolio-item.html">
-        <%= link_to image_tag(post.cover_photo), post %>
-        <%= post.title %>
-               </a>
-           </div>
+
+        <div class="col-sm-8 col-sm-offset-2 col-md-3 col-md-offset-1">          
+            <%= link_to image_tag(post.cover_photo), post, class: 'img-circle' %>
+            <h2><%= post.title %></h2>
+        </div>
       <% end %>
        </div>
 

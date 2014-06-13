@@ -1,17 +1,26 @@
 <%# add navigation links to this file %>
 <style>
 .navbar-text {
-  margin: 0;
-  top:0px;
+  /*margin: 0 auto;*/
+  /*top:0px;*/
 }
 
 .navbar .nav > li > a {
-  min-height: 72px;
-  padding-top: 26px;
+/*  min-height: 72px;
+  margin: 0 auto;*/
+  /*height: 72px;*/
+}
+
+.nav li a {
+ /*margin: 0 auto;*/
+ /*text-align: center;*/
+ /*vertical-align: middle;*/
+ /*padding: 23px 10px 23px 10px;*/
 }
 
 .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
-max-height: 72px;
+ /*max-height: 72px;*/
+ /*height: 72px;*/
 }
 
 </style> 
@@ -46,7 +55,10 @@ function WidthChange(mq) {
     // window width is at least 768px
       $("#logo").attr("src","<%=asset_path('logo.png')%>");
       $("#logo").attr("alt",'');
+      $("#logo").css("padding-top","0px");
       $(".navbar-collapse").removeAttr('style');
+      $(".navbar-brand").css({"width":"150px","height":"40px","padding":"10px 15px 10px 15px",});
+
       console.log("OMG");
 
   }
@@ -55,12 +67,9 @@ function WidthChange(mq) {
       $("#logo").attr("src"," ");
       $("#logo").attr("alt",'首頁');
       $("#logo").css("padding-top","13px");
-      $(".navbar-brand img").css("margin-top","0px");
       $(".navbar-brand").parent().css("height","40px");
-      $(".navbar-brand").css({"width":"150px","height":"40px","padding":"10px 15px 10px 15px"});
-      $("#report").css("height","40px");
-      $(".navbar-collapse").attr("style","max-height: 340px; height: 72px");
-
+      $(".navbar-brand").css({"width":"150px","height":"40px","padding":"10px 15px 10px 15px",});
+      // $(".navbar-collapse").attr("style","max-height: 340px; height: 72px");
   }
 
 }
