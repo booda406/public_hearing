@@ -1,94 +1,230 @@
 <style type="text/css">
-@import url(http://cs.nccu.edu.tw/~jonesyu/960gs/code/css/reset.css);
-@import url(http://cs.nccu.edu.tw/~jonesyu/960gs/code/css/960.css);
-@import url(http://cs.nccu.edu.tw/~jonesyu/960gs/code/css/text.css);
-@import url(http://fonts.googleapis.com/css?family=Oswald);
-body{
-  padding-top: 120px;
-}
-nav{
-  margin-top: 10px;
- }
+  main{
+    padding-top: 120px;
+  }
+  .row{
+    margin: 0;
+  }
 </style>
-
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-  
-<body class="container_12">
-  
-  <div class="grid_4">
-    
-    <div class="left">
-    <div class="SEARCH_Search">
-      <p><h2>SEARCH</h2></p>
-    <div>
-      <form id="SEARCH_Search">
-            <input type="text" class="searchbar" name="q" size="21" maxlength="120">
-<input type="submit" value="搜尋" class="serachbut">
-    </form>
-  <div class="SEARCH_Searchclear"></div>
-    </div>    
+
+<div class="container">
+  <div class="col-md-3 col-lg-3" id="left">
+    <div class="row">
+      <div class="col-md-12">
+        <p><h3 class="search_h3">關鍵字搜尋</h3></p>
+          <form id="search" method="POST">
+            <input id="search_text" name="search_text" type="text" class="form-control input-lg" placeholder="search">
+            <button id="sub_btn" type="button" value="" class="glyphicon glyphicon-search" onClick="messageGo();">
+          </form>
+      </div>
+    </div>
+    <hr class="col-md-9">
+    <div class="row">
+      <div class="Search_days col-md-12">
+        <h3 class="search_h3">幾天之內</h3>
+          <form class="Searchdays" id="Searchdays">
+            <input id="days" type="range" name="days" min="1" max="5" onClick="messageGo3();">
+          </form>
+          <p>|||||</p>
+          <ul class="list-inline days">
+            <li>過去</li>
+            <li>今天</li>
+            <li>10天</li>
+            <li>15天</li>
+            <li>30天</li>
+          </ul>
+      </div>
+    </div>
+    <hr class="col-md-9">
+    <div class="row">
+      <div class="Search_type col-md-12">
+        <h3 class="search_h3">公聽會類別</h3>
+        <div id="type" class="typebutton col-md-9">
+          <form id="tybtn" method="POST">
+            <input type="button" name="But1" id="But1" class="type" onclick="Change(1);messageGo2(1);" value="政治">
+            <input type="button" name="But2" id="But2" class="type" onclick="Change(2);messageGo2(2);" value="經濟">
+            <input type="button" name="But3" id="But3" class="type" onclick="Change(3);messageGo2(3);" value="環境">
+            <input type="button" name="But4" id="But4" class="type" onclick="Change(4);messageGo2(4);" value="保育">
+            <input type="button" name="But5" id="But5" class="type" onclick="Change(5);messageGo2(5);" value="內政">
+            <input type="button" name="But6" id="But6" class="type" onclick="Change(6);messageGo2(6);" value="外交">
+            <input type="button" name="But7" id="But7" class="type" onclick="Change(7);messageGo2(7);" value="財政">
+            <input type="button" name="But8" id="But8" class="type" onclick="Change(8);messageGo2(8);" value="法律">
+            <input type="button" name="But9" id="But9" class="type" onclick="Change(9);messageGo2(9);" value="教育">
+            <input type="button" name="But10" id="But10" class="type" onclick="Change(10);messageGo2(10);" value="社福">
+            <input type="button" name="But11" id="But11" class="type" onclick="Change(11);messageGo2(11);" value="文化">
+            <input type="button" name="But12" id="But12" class="type" onclick="Change(12);messageGo2(12);" value="科技">
+          </form>
+        </div>
+      </div>
+    </div>
+    <hr class="col-md-9">
+    <div class="row">
+      <div class="Search_sort col-md-12">
+        <h3 class="search_h3">排序方式</h3>
+        <div class="Search_select glyphicon glyphicon-chevron-down">
+          <select name="sort" id="searchsort" class="form-control input-sm glyphicon" onClick="messageGo4();">
+          <option value="a" >時間 (順排)</option>
+          <option value="b" >時間 (逆排)</option>
+          <option value="c" >人氣 (順排)</option>
+          <option value="d" >人氣 (逆排)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-9 right">
+    <a href="http://lis.ly.gov.tw/pubhearc/ttsbooki?N101473:0117-0176:_self">
+      <div class="row">
+        <div class="col-md-6 col-lg-6 col-sm-6">
+          <img src="http://payload208.cargocollective.com/1/11/380934/6468832/Untitled-3.png" class="img-rounded search_img">
+        </div>
+        <div class="col-md-6 col-lg-6 col-sm-6 Search_listen">
+          <div class="Search_time text-center"><strong>三天後！</strong></div>
+          <h3 class="Search_name search_h3"><strong>「海峽兩岸服務貿易協定」第三場公聽會</strong></h3>
+          <p class="Search_about ">戰役時間：<br>戰役地點：立法院群賢樓九樓大禮堂<br>對手陣營：<br>戰役主持：江召集委員起臣</p>
+        </div>
+      </div>
+    </a>
+    <hr>
+    <a href="http://lis.ly.gov.tw/pubhearc/ttsbooki?N101473:0117-0176:_self">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="http://payload208.cargocollective.com/1/11/380934/6468832/Untitled-3.png" class="img-rounded search_img">
+        </div>
+        <div class="col-md-6 Search_listen">
+          <div class="Search_time text-center"><strong>三天後！</strong></div>
+          <h3 class="Search_name search_h3"><strong>「自由經濟示範區特別條例草案」第五次公聽會</strong></h3>
+          <p class="Search_about ">戰役時間：04/14 18：00<br>戰役地點：立法院<br>對手陣營：立法院經濟委員會<br>戰役主持：葉津鈴</p>
+        </div>
+      </div>
+    </a>
+    <hr>
+  </div>
 </div>
-    
-    <div class="SEARCH_Filter">
-      <h2>FILTER</h2>
-      <h5>時間</h5>
-      <form action="demo_form.asp" method="get" class="days_filter">
-<input type="range" name="days" min="1" max="6">
-        <p>||||||</p>
-</form>
-      <h5>類別</h5>  
-    <div class="type">  
-      <input type="button" value="政治">
-      <input type="button" value="經濟">
-      <input type="button" value="環境">
-      <input type="button" value="性別">
-      <input type="button" value="教育">
-      <input type="button" value="政治">
-      <input type="button" value="政治">
-      <input type="button" value="政治">
-    </div>
-</div>    
-    <div class="SEARCH_Arrangement">
-      <h2>ARRANGEMENT</h2>
-    <div class="select"> 
-    <select name="排列方式">
-        <option>時間 ↓</option>
-        <option>時間 ↑</option>
-        <option>人氣 ↓</option>
-        <option>人氣 ↑</option>
-      </select>
-    </div>
-      
-</div>  
-  </div>
-  </div>
-  
-  <div class="grid_8">
-       <a href="http://public-hearing.herokuapp.com/hearing_conferences/6" class="search_a"><div class="all">
-    <p><img src="assets/img6.jpg" class="search_img">
-         <p class="time">100 年 2 月 11 日(星期五)<br>上午 9 時 30 分</p>
-         <p class="name">「石化工業政策評估說明書」</p>      
-         <p class="about">石化工業政策為指導性計畫，為通過前應先將個案（國光石化、六輕五期等）審查暫停，否則在指導性計畫通過前先通過個案環評將有違公正性。而近年來台灣的政策綱領即為節能減碳，然而石化政策評估卻絲毫沒有提到，是否有違此發展政策？而整份石化政策的評估報告書十分簡略，甚至玩起數字遊戲，讓人民更無法信任政府舉辦公聽會的誠意。</p></p>
-    </a></div>
-    
-    <div class="all">
-    <p><img src="http://payload208.cargocollective.com/1/11/380934/6468832/Untitled-3.png" class="search_img">
-         <p class="time">5/13 1800</p>
-         <p class="name">公聽會名稱</p>      
-         <p class="about">Recently I was trying to create a web form where a user could enter a start time and end time to create a time window for a schedule. However, the easiest solution – having a user enter the times into two text boxes – seemed clunky and annoying to use.</p></p>
-    </div>
-  
-      <div class="all">
-    <p><img src="http://payload208.cargocollective.com/1/11/380934/6468832/Untitled-3.png" class="search_img">
-         <p class="time">5/13 1800</p>
-         <p class="name">公聽會名稱</p>      
-         <p class="about">Recently I was trying to create a web form where a user could enter a start time and end time to create a time window for a schedule. However, the easiest solution – having a user enter the times into two text boxes – seemed clunky and annoying to use.</p></p>
-</div>
-      
 
-  </div>
-  </body>
+<script language=javascript>
+function messageGo(){
+var search = $('#search_text').val();
+  $.ajax({
+      url:"",
+      data:search,
+      type : "POST",
+      dataType:'json',
+      error:function(){
+      alert("失敗");
+      },
+      success:function(){
+      alert("成功");
+      }
+  });
+}
 
+function messageGo3(){
+var range = $('#days').val();
+  $.ajax({
+      url:"",
+      data:range,
+      type : "POST",
+      dataType:'json',
+      error:function(){
+      alert("失敗");
+      },
+      success:function(){
+      alert("成功");
+      }
+  });
+}
 
+function Change(num){
+  var cl=document.getElementById('But'+num);
+if(cl.className === "click"){
+  cl.className = "type";
+}
+else{
+cl.className = "click";
+}
+}
+function messageGo2(num){
+           
+var send='But'+num;
 
-</html>
+  $.ajax({
+
+      url:"",
+      data:send,
+
+      type : "POST",
+      dataType:'json',
+
+      error:function(){
+      alert("失敗");
+
+      },
+      success:function(){
+      alert("成功");
+      }
+  });
+}
+
+function messageGo4(){
+var sort = $('#searchsort').val();
+if(sort==='a'){
+  $.ajax({
+      url:"",
+      data:sort,
+      type : "POST",
+      dataType:'json',
+      error:function(){
+      alert("失敗");
+      },
+      success:function(){
+      alert("成功");
+      }
+  });
+}
+if(sort==='b'){
+  $.ajax({
+      url:"",
+      data:sort,
+      type : "POST",
+      dataType:'json',
+      error:function(){
+      alert("失敗");
+      },
+      success:function(){
+      alert("成功");
+      }
+  });
+}
+if(sort==='c'){
+  $.ajax({
+      url:"",
+      data:sort,
+      type : "POST",
+      dataType:'json',
+      error:function(){
+      alert("失敗");
+      },
+      success:function(){
+      alert("成功");
+      }
+  });
+}
+if(sort==='d'){
+  $.ajax({
+      url:"",
+      data:sort,
+      type : "POST",
+      dataType:'json',
+      error:function(){
+      alert("失敗");
+      },
+      success:function(){
+      alert("成功");
+      }
+  });
+}
+}
+</script>
+<!-- 分隔線 -->
