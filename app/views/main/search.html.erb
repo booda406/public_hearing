@@ -61,45 +61,40 @@
     <hr class="col-md-9">
     <div class="row">
       <div class="Search_sort col-md-12">
-        <h3 class="search_h3">排序方式</h3>
-        <div class="Search_select glyphicon glyphicon-chevron-down">
-          <select name="sort" id="searchsort" class="form-control input-sm glyphicon" onClick="messageGo4();">
-          <option value="a" >時間 (順排)</option>
-          <option value="b" >時間 (逆排)</option>
-          <option value="c" >人氣 (順排)</option>
-          <option value="d" >人氣 (逆排)</option>
-          </select>
+          <div class="dropdown">
+                  <a href="#" data-toggle="dropdown" class="dropdown-toggle"><h3 class="search_h3">排序方式<b class="glyphicon glyphicon-chevron-down"></b></h3> </a>
+                <ul class="dropdown-menu">
+                    <li><%= link_to "時間(順排)", search_path(params[:order]="happen_date DESC"), remote: true %></li>
+                    <li><%= link_to "時間(逆排)", search_path(params[:order]="happen_date ASC"), remote: true %></li>
+                    <li><%= link_to "人氣(順排)", search_path(params[:order]="count DESC"), remote: true %></li>
+                    <li><%= link_to "人氣(逆排)", search_path(params[:order]="count DESC"), remote: true %></li>
+                </ul>
+            </div>
         </div>
-      </div>
     </div>
   </div>
-  <div class="col-md-8 right">
-    <a href="http://lis.ly.gov.tw/pubhearc/ttsbooki?N101473:0117-0176:_self" class="search_a">
+  <div class="col-md-8 right" id="conferences">
+    <% @hearingconferences.each do |conference| %>
+    <a href="<%=hearing_conference_path(conference)%>" class="search_a">
       <div class="row">
-        <div class="col-md-6 col-lg-6 col-sm-6">
-          <img src="http://payload208.cargocollective.com/1/11/380934/6468832/Untitled-3.png" class="img-rounded search_img">
+        <div class="col-md-6 col-lg-6 col-sm-6" style="margin-top:20px;">
+          <%= image_tag(conference.photo.search, class: "img-rounded search-img") %>
         </div>
         <div class="col-md-6 col-lg-6 col-sm-6 Search_listen">
-          <div class="Search_time text-center"><strong>三天後！</strong></div>
-          <h3 class="Search_name search_h3"><strong>「海峽兩岸服務貿易協定」第三場公聽會</strong></h3>
-          <p>戰役時間：<br>戰役地點：立法院群賢樓九樓大禮堂<br>對手陣營：<br>戰役主持：江召集委員起臣</p>
+          <% if ((conference.happen_date.to_time - Time.now)/1.day).to_i < 0
+              @day = ((Time.now - conference.happen_date.to_time)/1.day).to_i.to_s + "天前"
+            else
+              @day = ((conference.happen_date.to_time - Time.now)/1.day).to_i.to_s + "天後"
+            end
+           %>
+          <div class="Search_time text-center"><strong><%=@day%>！</strong></div>
+          <h3 class="Search_name search_h3"><strong><%=conference.title%></strong></h3>
+          <p class="search_p">戰役時間：<%=conference.happen_date%><br>戰役地點：<%=conference.location%><br>對手陣營：<br>戰役主持：江召集委員起臣</p>
         </div>
       </div>
     </a>
     <hr>
-    <a href="http://lis.ly.gov.tw/pubhearc/ttsbooki?N101473:0117-0176:_self" class="search_a">
-      <div class="row">
-        <div class="col-md-6">
-          <img src="http://payload208.cargocollective.com/1/11/380934/6468832/Untitled-3.png" class="img-rounded search_img">
-        </div>
-        <div class="col-md-6 Search_listen">
-          <div class="Search_time text-center"><strong>三天後！</strong></div>
-          <h3 class="Search_name search_h3"><strong>「自由經濟示範區特別條例草案」第五次公聽會</strong></h3>
-          <p>戰役時間：04/14 18：00<br>戰役地點：立法院<br>對手陣營：立法院經濟委員會<br>戰役主持：葉津鈴</p>
-        </div>
-      </div>
-    </a>
-    <hr>
+    <% end %>
   </div>
 </div>
 
@@ -165,66 +160,6 @@ var send='But'+num;
       alert("成功");
       }
   });
-}
-
-function messageGo4(){
-var sort = $('#searchsort').val();
-if(sort==='a'){
-  $.ajax({
-      url:"",
-      data:sort,
-      type : "POST",
-      dataType:'json',
-      error:function(){
-      alert("失敗");
-      },
-      success:function(){
-      alert("成功");
-      }
-  });
-}
-if(sort==='b'){
-  $.ajax({
-      url:"",
-      data:sort,
-      type : "POST",
-      dataType:'json',
-      error:function(){
-      alert("失敗");
-      },
-      success:function(){
-      alert("成功");
-      }
-  });
-}
-if(sort==='c'){
-  $.ajax({
-      url:"",
-      data:sort,
-      type : "POST",
-      dataType:'json',
-      error:function(){
-      alert("失敗");
-      },
-      success:function(){
-      alert("成功");
-      }
-  });
-}
-if(sort==='d'){
-  $.ajax({
-      url:"",
-      data:sort,
-      type : "POST",
-      dataType:'json',
-      error:function(){
-      alert("失敗");
-      },
-      success:function(){
-      alert("成功");
-      }
-  });
-}
 }
 </script>
 <!-- 分隔線 -->

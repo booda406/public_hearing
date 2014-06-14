@@ -1,0 +1,21 @@
+  <% @hearingconferences.each do |conference| %>
+  <a href="<%=hearing_conference_path(conference)%>" class="search_a">
+    <div class="row">
+      <div class="col-md-6 col-lg-6 col-sm-6" style="margin-top:20px;">
+        <%= image_tag(conference.photo.search, class: "img-rounded search-img") %>
+      </div>
+      <div class="col-md-6 col-lg-6 col-sm-6 Search_listen">
+        <% if ((conference.happen_date.to_time - Time.now)/1.day).to_i < 0
+            @day = ((Time.now - conference.happen_date.to_time)/1.day).to_i.to_s + "天前"
+          else
+            @day = ((conference.happen_date.to_time - Time.now)/1.day).to_i.to_s + "天後"
+          end
+         %>
+        <div class="Search_time text-center"><strong><%=@day%>！</strong></div>
+        <h3 class="Search_name search_h3"><strong><%=conference.title%></strong></h3>
+        <p class="search_p">戰役時間：<%=conference.happen_date%><br>戰役地點：<%=conference.location%><br>對手陣營：<br>戰役主持：江召集委員起臣</p>
+      </div>
+    </div>
+  </a>
+  <hr>
+  <% end %>

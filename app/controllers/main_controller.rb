@@ -6,7 +6,11 @@ class MainController < ApplicationController
 	end
 
 	def search
-		
+		if params[:order]
+			@hearingconferences = HearingConference.order(params[:order])
+		else
+			@hearingconferences = HearingConference.order('happen_date DESC')
+		end
 	end
 
 	def report
