@@ -1,224 +1,328 @@
     <title>台灣公聽會，資訊百老匯─個人頁面</title>
 <style type="text/css">
-/* v1.0 | 20080212 */
+  @import url(http://fonts.googleapis.com/css?family=Droid+Sans+Mono);
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    background: transparent;
+html,body {
+  height: 100%;
+  font-family: 'Droid Sans Mono', sans-serif;
 }
+
+p,h1,h2,h3,h4 {
+  font-family: 'Droid Sans Mono', sans-serif;
+}
+
+hr {
+  border-color:#191919;
+}
+
+/* wrapper for page content to push down footer */
+.page-container {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  padding-bottom: 80px;
+}
+
 body {
-    line-height: 1;
+  padding-top: 75px; 
+  color: #f9f9f9;
 }
-ol, ul {
-    list-style: none;
+a {
+  color:#bcbcbc;
 }
-blockquote, q {
-    quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
+.text-center {
+  padding-top: 20px;
 }
 
-/* remember to define focus styles! */
-:focus {
-    outline: 0;
+#sidebar {
+  height: 100%;
+  padding-right: 0;
+  padding-top: 20px;
 }
 
-/* remember to highlight inserts somehow! */
-ins {
-    text-decoration: none;
-}
-del {
-    text-decoration: line-through;
+#sidebar .affix {
+  position:fixed;
+  top:55;
+  width:220px;
 }
 
-/* tables still need 'cellspacing="0"' in the markup */
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
+#sidebar .affix-bottom {
+  position:fixed;
+  top:55;
+  width:220px;
 }
 
-body{
-	  padding-top: 60px;
-    max-width: 1024px;
-    margin: 0 auto;
-    font-family: 微軟正黑體;
-    background-image: url("http://subtlepatterns.com/patterns/ricepaper2.png");
+#sidebar .nav {
+  width: 95%;
 }
-    
-.sidebar{
-    float: left;
-    position: fixed;
-    padding: 10px;
+#sidebar li {
+  border:0 #1e1e1e solid;
 }
-
-.content{
-    margin-left: 220px;
-    padding: 10px;
+#sidebar li a {
+  font-size: 16px;
+  text-align: center;
+  color: white;
+  line-height: 25px;
 }
-
-.follow{
-    text-align: center;
-    padding: 5px;
-    font-size: 1em;
-    width: 100px;
-    height: 40px;
-    background: #cc0000;
-    color: white;
-    border: none;
-    font-weight: bold;
+#sidebar li a:hover {
+  background-color:#222222;
+  color:#ffffff;
 }
-
-.follow:hover{
-    background: #ff3333;
-}
-
-.following{
-    text-align: center;
-    padding: 5px;
-    font-size: 1em;
-    width: 100px;
-    height: 40px;
-    background: #8c8c8c;
-    color: white;
-    border: none;
-    font-weight: bold;
-}
-
-ul {
-    list-style: none;
-    line-height: 2em;
-    margin-bottom: 1em;
-    color: grey;
-}
-
-.btn, .leftbar {
-    border-bottom: 1px solid grey;
-    text-align: center;
-}
-
-.username h3 {
-	font-size: 2em;
-	line-height: 150%;
-}
-
-.profilephoto img{
-	height: 100px;
-	width: 100px;
-}
-
-.leftbar {
-	width: 100px;
-}
-
-.leftbar a {
-	font-size: 1.2em;
-	line-height: 3em;
-}
-
-.leftbar a:hover {
-	text-decoration: none;
-	background-color: #808080;
+#sidebar li a p{
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 5px;
   color: black;
 }
 
-.pagename {
-	font-size: 2em;
-	font-weight: bold;
+/* collapsed sidebar styles */
+@media screen and (max-width: 767px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+  }
+  .row-offcanvas-right
+  .sidebar-offcanvas {
+    right: -41.6%;
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -41.6%;
+  }
+  .row-offcanvas-right.active {
+    right: 41.6%;
+  }
+  .row-offcanvas-left.active {
+    left: 41.6%;
+  }
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 41.6%;
+  }
+  #sidebar {
+    background-color:#3b3b3b;
+    padding-top:0;
+  }
+  #sidebar .nav>li {
+    color: #ddd;
+    background: linear-gradient(#3E3E3E, #383838);
+    border-top: 1px solid #484848;
+    border-bottom: 1px solid #2E2E2E;
+    padding-left:10px;
+  }
+  #sidebar .nav>li:first-child {
+    border-top:0;
+  }
+  #sidebar .nav>li>a {
+    color: #ddd;
+  }
+  #sidebar .nav>li>a>img {
+    max-width: 14px;
+  }
+  #sidebar .nav>li>a:hover, #sidebar .nav>li>a:focus {
+    text-decoration: none;
+    background: linear-gradient(#373737, #323232);
+    color: #fff;  
+  }
+  #sidebar .nav .caret {
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+  }
+  #sidebar .nav a:hover .caret{
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+  }
 }
 
-.articletitle {
-	line-height: 200%;
+/* theme */
+.btn,.form-control,.alert,.progress,.panel,.list-group,.well,.list-group-item:first-child {border-radius:1px;box-shadow:0 0 0;}
+.btn {border-color:transparent;}
+.btn-default,.well {
+  background-color:#cccccc;
+  border-color:#c0c0c0;
 }
-
-.articlecontent {
-	text-decoration: none;
+.btn-primary,.label-primary,.list-group-item.active,.list-group-item.active:hover,.list-group-item.active:focus,.btn.active,a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.active:focus {
+   background-color:#0099CC;
+   border-color:transparent;
 }
-
-.post_article a {
-	font-size: 20px;
+.btn-info,.label-info,.progress-bar-info {
+  background-color:#33b5e5;
 }
-.post_article a:after {
-	color : rgb(254,254,254);
+.btn-success,.label-success,.progress-bar-success {
+  background-color:#669900;
 }
-
-.btn {
-	background-color: #c12727;
+.btn-danger,.label-danger,.progress-bar-danger {
+  background-color:#FF4444;
 }
-
-.articlecontent span {
-	text-decoration: none;
-	font-size: 20px;
+.btn-warning,.label-warning,.progress-bar-warning {
+  background-color:#FFBB33;
+  color:#444444;
 }
-
-.leftbar:hover{
-    border-left: 3px solid #ff3333;
-    background: grey;
+.nav-tabs>li>a {
+  border-radius:0;
 }
-
-.post_article{
-    padding-top: 2em;
-    padding-bottom: 2em;
+     
+h3,h4,h5,.panel {
+   color:#555555;
+}
+.panel hr {
+   border-color:#efefef;
+}
+.background1{
+  background-color: #A4C5C2;
+}
+.background2{
+  background-color: #4D4D4D;
+}
+.row{
+  margin:0;
+}
+.follow_user{
+  text-align:center;
+  color:black;
+  font-size: 20px;
+}
+.post{
+ text-align: center; 
+ font-size: 20px;
+ background-color: white;
+ color: #4D4D4D;
+ font-weight: bold;
+ min-height: 45px;
+ line-height: 45px;
+}
+.post:hover{
+  background-color: black;
+  color:white;
+}
+.post a:hover{
+  background-color: black;
+  color: white;
 }
 </style>
-
-      <div class="sidebar">
-      
-          <div class="profilephoto">
-  			  <%= image_tag(@user.image) %>
-          </div>
-          <div class="username">
-              <h3><%= @user.name %></h3>
-          </div>
+<div class="page-container">
+    <div class="container-fluid">
+      <div class="row row-offcanvas row-offcanvas-left">
+        
+        <!--sidebar-->
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+          <div data-spy="affix" data-offset-top="45" data-offset-bottom="90">
+            <ul class="nav" id="sidebar-nav">
+              <li><%= image_tag(@user.image+"?type=large", style: "height:160px;width:160px;margin-bottom:10px") %></li>
           <% if (!current_user.following?(@user) && current_user.id != @user.id) %><span><%= button_to "+Follow", { action: "follow", id: current_user.id, user_id: @user.id }, class: "follow" %></span>
           <% elsif (current_user.following?(@user) && current_user.id != @user.id) %>
           <%= button_to "Folllowing", { action: "unfollow", id:current_user.id, user_id: @user.id }, class: "following"  %>
           <% end %>
-          <ul>
-              <li class="leftbar" ><a href="ph_profile_history.html">觀點發表紀錄</a></li>
-              <li class="leftbar" ><a href="ph_profil">追蹤清單</a>
-              	<ul>
-              	<% @users.each do |user| %>
-					       <li class="leftbar" ><%= link_to user.name, user_page_path(user.id) %></li>
-			  	      <% end %>
-			  	      </ul>
-			       </li>
-          </ul>
-      
-      </div>
-
-    <div class="row">
-    <% @hearingconferences.each do |hearingconference| %>
-      <div class="col-xs-10 col-sm-5 col-sm-offset-1 col-md-3 col-lg-3 pin_space">
-    	<h2 class="text-center"><%= link_to hearingconference.title, hearingconference %></h2>
-    	<%= link_to image_tag(hearingconference.photo, class: "img-responsive img-thumbnail"), hearingconference %>
-      </div>
-    <% end %>
-    </div>
-
-      <div class="content">
-          <h1 class="pagename">觀點發表紀錄</h1>
-      <% @posts.each do |post| %>
-          <div class="post_article">
-              <div class="time"><%= post.created_at.strftime("%F") %></div>
-              <div class="btn btn-info"><%= link_to post.hearing_conference.title, hearing_conference_path(post.hearing_conference_id) %></div>
-              <h2 class="articletitle"><%= link_to post.title, post %></h2>
-              <div class="articlecontent"><%= raw(post.content).truncate(100, :separator => " ").html_safe %>
-                <span text-align="right"><%= link_to "繼續閱讀→", post%></span></div>
+              <li class="background1"><a href="#"><strong><%=@user.name%></strong>軍師的個人檔案</a></li>
+              <li><a href="#section1"><p>新通知</p></a></li>
+              <li><a href="#section2"><p>個人戰帖記錄</p></a></li>
+              <li><a href="#section3"><p>追蹤清單</p></a></li>
+            </ul>
+           </div>
+        </div><!--/sidebar-->
+    
+        <!--/main-->
+        <div class="col-xs-12 col-sm-9" data-spy="scroll" data-target="#sidebar-nav">
+          <div class="row">
+             <div class="col-sm-6">
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h4><span class="glyphicon glyphicon-align-justify"></span>你關注的軍師發戰帖了</h4></div>
+                    <div class="panel-body">
+                      <div class="list-group">
+                        <a href="#" class="list-group-item active">Active item</a>
+                        <a href="#" class="list-group-item">Second item</a>
+                        <a href="#" class="list-group-item">Third item</a>
+                        <a href="#" class="list-group-item">Another item</a>
+                        <a href="#" class="list-group-item">Another item</a>
+                        <a href="#" class="list-group-item">Another item</a>
+                        <a href="#" class="list-group-item">Another item</a>
+                        <a href="#" class="list-group-item">Another item</a>
+                        <a href="#" class="list-group-item">Another item</a>
+                      </div>
+                    </div><!--/panel-body-->
+                </div><!--/panel-->
+            </div><!--/col-->
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h4><span class="glyphicon glyphicon-align-justify"></span>你關注的公聽會要開戰了</h4></div>
+                    <div class="panel-body">
+                      <div class="list-group">
+                        <a href="#" class="list-group-item active">Active item</a>
+                        <a href="#" class="list-group-item">Second item</a>
+                        <a href="#" class="list-group-item">Third item</a>
+                        <a href="#" class="list-group-item">Another item</a>
+                        <a href="#" class="list-group-item">Another item</a>
+                        <a href="#" class="list-group-item">Another item</a>
+                        <a href="#" class="list-group-item">Another item</a>
+                        <a href="#" class="list-group-item">Another item</a>
+                        <a href="#" class="list-group-item">Another item</a>
+                      </div>
+                    </div><!--/panel-body-->
+                </div><!--/panel-->
+            </div><!--/col-->
+          </div><!--/row-->
+          
+          <div id="section1" class="background1">
+            <h1><span class="glyphicon glyphicon-align-justify"></span>你關注的公聽會有新的戰況</h1>
+            <div class="panel-body background1">
+              <div class="list-group">
+                <a href="#" class="list-group-item active">Active item</a>
+                <a href="#" class="list-group-item">Second item</a>
+                <a href="#" class="list-group-item">Third item</a>
+              </div>
+            </div><!--/panel-->
           </div>
-    <% end %>
-      </div>
+          <div id="section2" class="background1">
+            <h1>你撰寫過的戰帖</h1>
+            <div class="row">
+              <% @posts.each do |post| %>
+              <div class="col-md-4">
+                <p class="post"><%= link_to post.title, post %></p>
+              </div>
+              <% end %>
+            </div>
+          </div>
+          <div id="section3" class="background1">
+            <h1>你正在關注的公聽會戰役</h1>
+            <div class="row">
+               <% @hearingconferences.each do |hearingconference| %>
+              <div class="col-md-2">
+                <a href="<%=hearing_conference_path(hearingconference)%>">
+                   <%=image_tag(hearingconference.photo, class: "img-responsive img-thumbnail")%>
+                  <p class="follow_user"><%=hearingconference.title%></p>
+                </a>
+              </div>
+               <% end %>
+            </div>
+          </div>
+          <div id="section4" class="background1">
+            <h1>你正在關注的軍師</h1>
+            <div class="row">
+            <% @users.each do |user| %>
+              <div class="col-md-2">
+                <a href="<%=user_page_path(user.id)%>">
+                  <%= image_tag(user.image+"?type=normal") %>
+                  <p class="follow_user"><%= user.name %></p>
+               </a>
+              </div>
+            <% end %>
+            </div><!--/row-->
+          </div>
+        </div><!--/.col-xs-12-->
+      </div><!--/.row-->
+  </div><!--/.container-->
+</div><!--/.page-container-->
+<script type="text/javascript">
+  $('[data-toggle=offcanvas]').click(function() {
+  $('.row-offcanvas').toggleClass('active');
+});
 
+$('.btn-toggle').click(function() {
+  $(this).find('.btn').toggleClass('active').toggleClass('btn-default').toggleClass('btn-primary');
+});
+
+</script>
