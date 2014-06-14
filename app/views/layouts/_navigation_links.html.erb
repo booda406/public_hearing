@@ -1,4 +1,5 @@
 <%# add navigation links to this file %>
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <style>
 .navbar-text {
   margin: 0 auto;
@@ -13,15 +14,19 @@
 .nav li a {
  padding: 23px 10px 23px 10px;
  margin: 0 5px 0 5px;
+ height: 71px;
 }
-
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: #4D4D4D;
+    color: #FFFFFF;
+}
 .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
  max-height: 71px;
 }
 </style>
 
-      <li><a href="/search"><span class="glyphicon glyphicon-search"></span>前哨站記錄</a></li>
-      <li><a href="/posts"><span class="glyphicon glyphicon-pencil"></span>戰況分析</a></li>
+      <li><a href="/search" id="record"><span class="glyphicon glyphicon-search"></span>前哨站記錄</a></li>
+      <li><a href="/posts" id="post"><span class="glyphicon glyphicon-pencil"></span>戰況分析</a></li>
       <li><%= link_to image_tag('logo-03.png', id: "logo"), root_path, class: 'navbar-brand' %></li>
 	    <li><a href="/report" id="report"><span class="glyphicon glyphicon-bullhorn"></span>情資回報</a></li>
           
@@ -29,11 +34,44 @@
         <p class="navbar-text"><strong><%= link_to current_user.name, user_page_path(current_user.id) %></strong>軍師你好!<br><%= image_tag current_user.image, style: "display:inline-block" %>
         <%= link_to "登出", signout_path, id: "sign_out" %></p>
     <% else %>
-        <li><i class="fa fa-facebook-square"></i><%= link_to "加入作戰", "/auth/facebook", id: "sign_in", style: "display:inline-block" %></li>
+        <li><a href="/auth/facebook" id="sign_in"><i class="fa fa-facebook-square"></i>加入作戰</a></li>
     <% end %>
 
 
 <script>
+$('#record').hover(function(){
+  $('#record').html('<span class="glyphicon glyphicon-search"></span>公聽會搜尋')
+  },function(){
+   $('#record').html('<span class="glyphicon glyphicon-search"></span>前哨站記錄') 
+  }
+);
+$('#post').hover(function(){
+  $('#post').html('<span class="glyphicon glyphicon-pencil"></span>焦點專文')
+  },function(){
+   $('#post').html('<span class="glyphicon glyphicon-pencil"></span>戰況分析') 
+  }
+);
+$('#report').hover(function(){
+  $('#report').html('<span class="glyphicon glyphicon-bullhorn"></span>公聽會回報')
+  },function(){
+   $('#report').html('<span class="glyphicon glyphicon-bullhorn"></span>情資回報') 
+  }
+);
+$('#sign_in').hover(function(){
+  $('#sign_in').html('<i class="fa fa-facebook-square"></i>臉書登入')
+  },function(){
+   $('#sign_in').html('<i class="fa fa-facebook-square"></i>加入作戰') 
+  }
+);
+$( window ).resize(function() {
+  if (window.matchMedia("(min-width:800px)").matches) {
+    /* the view port is at least 400 pixels wide */
+    $("li").css('font-size','20px');
+  } else {
+    /* the view port is less than 400 pixels wide */
+    $("li").css('font-size','14px');
+  }
+});
 var mq = window.matchMedia( "(min-width: 768px)" );
 
 // media query event handler
