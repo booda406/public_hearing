@@ -22,7 +22,7 @@ PublicHearing::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
    root 'main#index'
-   get 'search(params[:order])' => 'main#search', as: 'search'
+   get 'search' => 'main#search', as: 'search'
    get 'report' => 'main#report', as: 'report'
 
    # for user
