@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140612134700) do
+ActiveRecord::Schema.define(version: 20140614100119) do
 
   create_table "answers", force: true do |t|
     t.string   "content"
@@ -90,6 +90,7 @@ ActiveRecord::Schema.define(version: 20140612134700) do
     t.string   "title"
     t.string   "cover_photo"
     t.integer  "count",                             default: 0
+    t.string   "description"
   end
 
   create_table "questions", force: true do |t|

@@ -31,9 +31,12 @@ class CoverPhotoUploader < CarrierWave::Uploader::Base
   end
 
   version :show do
-    process :resize_to_fit => [544,360]
+    process :resize_to_fit => [263,195]
   end
 
+  version :cover_photo do
+    process :resize_to_fit => [1024,350]
+  end
 
   # Process files as they are uploaded:
   # process :scale => [200, 300]

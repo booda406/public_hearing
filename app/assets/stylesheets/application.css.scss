@@ -27,10 +27,10 @@
   // background-color: #cccccc;
   // background-repeat:repeat-x;
   background-repeat:no-repeat;
- 	background-image: url("background.jpg");
+ 	background-image: url("http://subtlepatterns.com/patterns/ricepaper2.png");
  }
  main {
-  background-image: url("background.jpg");
+  background-image: url("http://subtlepatterns.com/patterns/ricepaper2.png");
   min-height: 550px;
   border:none;
   margin:0;
@@ -59,4 +59,7 @@
 .nav > li > a > img{
 	margin-top: -15px;
 	max-height: 90px;
+}
+.navbar{
+  border-top: 5px solid #B70030;
 }
