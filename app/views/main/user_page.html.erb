@@ -290,7 +290,7 @@ h3,h4,h5,.panel {
             <h1>你正在關注的公聽會戰役</h1>
             <div class="row">
                <% @hearingconferences.each do |hearingconference| %>
-              <div class="col-md-2">
+              <div class="col-md-2 col-xs-3">
                 <a href="<%=hearing_conference_path(hearingconference)%>">
                    <%=image_tag(hearingconference.photo, class: "img-responsive img-thumbnail")%>
                   <p class="follow_user"><%=hearingconference.title%></p>
@@ -303,7 +303,7 @@ h3,h4,h5,.panel {
             <h1>你正在關注的軍師</h1>
             <div class="row">
             <% @users.each do |user| %>
-              <div class="col-md-2">
+              <div class="col-md-2 col-xs-3">
                 <a href="<%=user_page_path(user.id)%>">
                   <%= image_tag(user.image+"?type=normal") %>
                   <p class="follow_user"><%= user.name %></p>

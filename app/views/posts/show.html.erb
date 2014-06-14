@@ -3,5 +3,7 @@
 <h1><%= @post.user.name %></h1>
 <%= raw(@post.content) %>
 
+<% if current_user === @post.user %>
 <%= link_to 'Edit', edit_hearing_conference_post_path(@post.hearing_conference_id,@post.id) %> |
+<% end %>
 <%= link_to 'Back', posts_path %>
