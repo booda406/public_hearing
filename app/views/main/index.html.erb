@@ -3,7 +3,7 @@
   <div class="ws_images">
     <ul>
   <% @hearingconferences.each do |conference| %>
-      <li><img src="<%=conference.photo.cover_photo.url%>" alt="<%=conference.title%>" title="<%=conference.title%>" id="wows1_<%=conference.id-1%>"/><%=conference.description%></li>
+      <li><a href="<%=hearing_conference_path(conference)%>"><img src="<%=conference.photo.cover_photo.url%>" alt="<%=conference.title%>" title="<%=conference.title%>" id="wows1_<%=conference.id-1%>"/></a><%=conference.description%></li>
       <% end %>
     </ul>
   </div>
@@ -22,7 +22,7 @@ $("#wowslider-container1").wowSlider({effect:"domino",prev:"",next:"",duration:2
       <!-- Example row of columns -->
       <div class="row" style="display:relative">
         <div class="col-md-3">
-          <img src="../assets/war.png" class="img-responsive" style="width:80%;">
+          <img src="../assets/war.png" class="img-responsive img-rounded" style="width:80%;">
         </div>
         <div class="col-md-9" style="height:150px;">
           <div class="conference_title"><strong>戰況激烈</strong><div class="conference_subtitle">熱門公聽會</div></div>
@@ -32,8 +32,9 @@ $("#wowslider-container1").wowSlider({effect:"domino",prev:"",next:"",duration:2
      <div class="row">
       <% @hearingconferences.each do |conference| %>
   
-          <div class="col-sm-8 col-sm-offset-2 col-md-3 col-md-offset-1">          
-            <%= link_to image_tag(conference.photo.show), conference,  class: 'img-circle' %>
+          <div class="col-sm-8 col-sm-offset-2 col-md-3 col-md-offset-1 for_hover">
+            <a href="<%=hearing_conference_path(conference)%>">
+            <%= image_tag(conference.photo.show, class: 'img-rounded') %>
               <h4><%= conference.title %></h4>
               <h6><%= conference.happen_date %></h6>
               <p><%= conference.description %></p>
@@ -42,7 +43,7 @@ $("#wowslider-container1").wowSlider({effect:"domino",prev:"",next:"",duration:2
                 <li><a class="tag"><%= tag %></a></li>
               <% end %>
               </ul>
-
+            </a>
           </div>
       <% end %>
     </div>
@@ -50,7 +51,7 @@ $("#wowslider-container1").wowSlider({effect:"domino",prev:"",next:"",duration:2
       <br>
       <div class="row">
         <div class="col-md-3">
-          <img src="../assets/article.png" style=width:80%>
+          <img src="../assets/article.png" class="img-responsive img-rounded" style="width:80%;">
         </div>
         <div class="col-md-9" style="height:150px;">
           <div class="conference_title"><strong>戰況分析</strong><div class="conference_subtitle">焦點專文區</div></div>
@@ -60,10 +61,12 @@ $("#wowslider-container1").wowSlider({effect:"domino",prev:"",next:"",duration:2
        <div class="row">
       <% @posts.each do |post| %>
 
-        <div class="col-sm-8 col-sm-offset-2 col-md-3 col-md-offset-1">          
-            <%= link_to image_tag(post.cover_photo), post, class: 'img-circle' %>
+        <div class="col-sm-8 col-sm-offset-2 col-md-3 col-md-offset-1 for_hover">
+          <a href="<%=post_path(post)%>">
+            <%= image_tag(post.cover_photo, class: 'img-rounded') %>
             <h4><%= post.title %></h4>
             <p><%= post.description %></p>
+          </a>
         </div>
       <% end %>
        </div>
