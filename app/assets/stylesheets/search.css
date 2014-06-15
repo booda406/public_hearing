@@ -229,9 +229,6 @@ input[type='range']::-moz-range-thumb {
   height:30px;
   margin-bottom:-35px;
 }
-.search_a:hover{
-  color: black;
-}
 .search_p{
   color: black;
 }

@@ -75,7 +75,7 @@
   </div>
   <div class="col-md-8 right" id="conferences">
     <% @hearingconferences.each do |conference| %>
-    <a href="<%=hearing_conference_path(conference)%>" class="search_a">
+    <a href="<%=hearing_conference_path(conference)%>">
       <div class="row">
         <div class="col-md-6 col-lg-6 col-sm-6" style="margin-top:20px;">
           <%= image_tag(conference.photo.search, class: "img-rounded search-img") %>
