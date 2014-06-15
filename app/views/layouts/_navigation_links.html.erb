@@ -5,21 +5,35 @@
   margin: 0 auto;
   top:0px;
 }
-
+.navbar-text:hover{
+  background-color: #4D4D4D;
+  color: #fff;
+}
+.navbar-text:hover a{
+  background-color: #4D4D4D;
+  color: #fff;
+}
 .navbar .nav > li > a {
   min-height: 71px;
   height: 71px;
   font-size: 20px;
 }
-
+.navbar-default .navbar-nav > li > a:hover #logo{
+    background-color: #ffffff;
+    color: #ffffff;
+}
 .nav li a {
  padding: 23px 10px 23px 10px;
  margin: 0 5px 0 5px;
  height: 71px;
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    opacity: 1;
     background-color: #4D4D4D;
     color: #FFFFFF;
+}
+.navbar-default .navbar-nav > li > a:hover #logo, .navbar-default .navbar-nav > li > a:focus #logo{
+    background-color: transparent;
 }
 .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
  max-height: 71px;
@@ -90,7 +104,7 @@ function WidthChange(mq) {
       $("#logo").attr("alt",'');
       $("#logo").css("padding-top","5px");
       $(".navbar-collapse").removeAttr('style');
-      $(".navbar-brand").css({"width":"216px","height":"71px","padding":"10px 15px 10px 15px",});
+      $(".navbar-brand").css({"width":"216px","height":"71px","padding":"10px 0px 10px 0px",});
   }
   else {
     // window width is less than 768px
@@ -98,7 +112,7 @@ function WidthChange(mq) {
       $("#logo").attr("alt",'首頁');
       $("#logo").css("padding-top","13px");
       $(".navbar-brand").parent().css("height","40px");
-      $(".navbar-brand").css({"width":"150px","height":"40px","padding":"10px 15px 10px 15px",});
+      $(".navbar-brand").css({"width":"150px","height":"40px","padding":"10px 0px 10px 0px",});
       $(".navbar-collapse").attr("style","max-height: 340px; ");
   }
 
