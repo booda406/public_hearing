@@ -4,11 +4,11 @@
 
 html,body {
   height: 100%;
-  font-family: 'Droid Sans Mono', sans-serif;
+  font-family: "新細明體",'Times New Roman', sans-serif;
 }
 
 p,h1,h2,h3,h4 {
-  font-family: 'Droid Sans Mono', sans-serif;
+  font-family: "新細明體",'Times New Roman', sans-serif;
 }
 
 hr {
@@ -27,11 +27,11 @@ body {
   padding-top: 75px; 
   color: #f9f9f9;
 }
-a {
-  color:#bcbcbc;
-}
 .text-center {
   padding-top: 20px;
+}
+.white{
+  color: #ffffff;
 }
 
 #sidebar {
@@ -43,7 +43,7 @@ a {
 #sidebar .affix {
   position:fixed;
   top:55;
-  width:220px;
+  width:20%;
 }
 
 #sidebar .affix-bottom {
@@ -61,20 +61,27 @@ a {
 #sidebar li a {
   font-size: 16px;
   text-align: center;
-  color: white;
+  color: black;
   line-height: 25px;
 }
 #sidebar li a:hover {
   background-color:#222222;
   color:#ffffff;
 }
-#sidebar li a p{
+#sidebar li a b{
   text-align: center;
   font-size: 20px;
   letter-spacing: 5px;
-  color: black;
 }
-
+#sidebar li a:hover{
+  color: white;
+}
+#follow{
+  height: 60px;
+  font-size: 25px;
+  text-align: center;
+  line-height: 60px;
+}
 /* collapsed sidebar styles */
 @media screen and (max-width: 767px) {
   .row-offcanvas {
@@ -165,12 +172,20 @@ a {
 .nav-tabs>li>a {
   border-radius:0;
 }
-     
+.panel{
+  background-color: #A4C5C2;
+}    
 h3,h4,h5,.panel {
    color:#555555;
 }
 .panel hr {
    border-color:#efefef;
+}
+.news{
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    padding: 10px 15px;  
+    color: black;
 }
 .background1{
   background-color: #A4C5C2;
@@ -180,6 +195,17 @@ h3,h4,h5,.panel {
 }
 .row{
   margin:0;
+}
+#follow a{
+  background-color: #A4C5C2;
+}
+.follow{
+  height: 57px;
+  color: white;
+  font-size: 25px;
+  letter-spacing: 5px;
+  font-weight: bold;
+  width: 100%;
 }
 .follow_user{
   text-align:center;
@@ -203,6 +229,9 @@ h3,h4,h5,.panel {
   background-color: black;
   color: white;
 }
+.left-line{
+  border-left:thick groove #000000;
+}
 </style>
 <div class="page-container">
     <div class="container-fluid">
@@ -213,24 +242,20 @@ h3,h4,h5,.panel {
           <div data-spy="affix" data-offset-top="45" data-offset-bottom="90">
             <ul class="nav" id="sidebar-nav">
               <li><%= image_tag(@user.image+"?type=large", style: "height:160px;width:160px;margin-bottom:10px") %></li>
-          <% if (!current_user.following?(@user) && current_user.id != @user.id) %><span><%= button_to "+Follow", { action: "follow", id: current_user.id, user_id: @user.id }, class: "follow" %></span>
-          <% elsif (current_user.following?(@user) && current_user.id != @user.id) %>
-          <%= button_to "Folllowing", { action: "unfollow", id:current_user.id, user_id: @user.id }, class: "following"  %>
-          <% end %>
-              <li class="background1"><a href="#"><strong><%=@user.name%></strong>軍師的個人檔案</a></li>
-              <li><a href="#section1"><p>新通知</p></a></li>
-              <li><a href="#section2"><p>個人戰帖記錄</p></a></li>
-              <li><a href="#section3"><p>追蹤清單</p></a></li>
+              <li class="background1" id="follow"><strong class="white"><%=@user.name%></strong><b class="white">軍師的個人檔案</b></li>
+              <li><a href="#"><b>新通知</b></a></li>
+              <li><a href="#section1"><b>個人戰帖記錄</b></a></li>
+              <li><a href="#section3"><b>追蹤清單</b></a></li>
             </ul>
            </div>
         </div><!--/sidebar-->
     
         <!--/main-->
-        <div class="col-xs-12 col-sm-9" data-spy="scroll" data-target="#sidebar-nav">
+        <div class="col-xs-12 col-sm-9 left-line" data-spy="scroll" data-target="#sidebar-nav">
           <div class="row">
              <div class="col-sm-6">
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h4><span class="glyphicon glyphicon-align-justify"></span>你關注的軍師發戰帖了</h4></div>
+                  <div class="background1"><h3 class="news"><img src="../assets/newmessage-01.png" height="50px" width="50px" style="display:inline-block;margin-right:20px">你關注的軍師發戰帖了</h3></div>
                     <div class="panel-body">
                       <div class="list-group">
                         <a href="#" class="list-group-item active">Active item</a>
@@ -248,7 +273,7 @@ h3,h4,h5,.panel {
             </div><!--/col-->
             <div class="col-sm-6">
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h4><span class="glyphicon glyphicon-align-justify"></span>你關注的公聽會要開戰了</h4></div>
+                  <div class="background1"><h3 class="news"><img src="../assets/newmessage-01.png" height="50px" width="50px" style="display:inline-block;margin-right:20px">你關注的公聽會要開戰了</h3></div>
                     <div class="panel-body">
                       <div class="list-group">
                         <a href="#" class="list-group-item active">Active item</a>
@@ -267,7 +292,7 @@ h3,h4,h5,.panel {
           </div><!--/row-->
           
           <div id="section1" class="background1">
-            <h1><span class="glyphicon glyphicon-align-justify"></span>你關注的公聽會有新的戰況</h1>
+            <h3 class="news"><img src="../assets/newmessage-01.png" height="70px" width="70px" style="display:inline-block;margin-right:10px">你關注的公聽會有新的戰況</h3>
             <div class="panel-body background1">
               <div class="list-group">
                 <a href="#" class="list-group-item active">Active item</a>
@@ -277,7 +302,7 @@ h3,h4,h5,.panel {
             </div><!--/panel-->
           </div>
           <div id="section2" class="background1">
-            <h1>你撰寫過的戰帖</h1>
+            <h3 class="news"><img src="../assets/write-02.png" height="70px" width="70px" style="display:inline-block;margin-right:10px">你撰寫過的戰帖</h3>
             <div class="row">
               <% @posts.each do |post| %>
               <div class="col-md-4">
@@ -287,7 +312,7 @@ h3,h4,h5,.panel {
             </div>
           </div>
           <div id="section3" class="background1">
-            <h1>你正在關注的公聽會戰役</h1>
+            <h3 class="news"><img src="../assets/eye-03.png" height="70px" width="70px" style="display:inline-block;margin-right:10px">你正在關注的公聽會戰役</h3>
             <div class="row">
                <% @hearingconferences.each do |hearingconference| %>
               <div class="col-md-2 col-xs-3">
@@ -300,7 +325,7 @@ h3,h4,h5,.panel {
             </div>
           </div>
           <div id="section4" class="background1">
-            <h1>你正在關注的軍師</h1>
+            <h3 class="news"><img src="../assets/eye-03.png" height="70px" width="70px" style="display:inline-block;margin-right:10px">你正在關注的軍師</h3>
             <div class="row">
             <% @users.each do |user| %>
               <div class="col-md-2 col-xs-3">
@@ -318,11 +343,20 @@ h3,h4,h5,.panel {
 </div><!--/.page-container-->
 <script type="text/javascript">
   $('[data-toggle=offcanvas]').click(function() {
-  $('.row-offcanvas').toggleClass('active');
-});
+    $('.row-offcanvas').toggleClass('active');
+  });
 
-$('.btn-toggle').click(function() {
-  $(this).find('.btn').toggleClass('active').toggleClass('btn-default').toggleClass('btn-primary');
-});
+  $('.btn-toggle').click(function() {
+    $(this).find('.btn').toggleClass('active').toggleClass('btn-default').toggleClass('btn-primary');
+  });
 
+  $('#follow').hover(function(){
+    <% if (!current_user.following?(@user) && current_user.id != @user.id) %>
+    $('#follow').html('<%=button_to "關注此軍師", { action: "follow", id: current_user.id, user_id: @user.id }, class: "background1 follow"%>');
+    <% elsif (current_user.following?(@user) && current_user.id != @user.id) %>
+    $('#follow').html('<%=button_to "已經關注此軍師", { action: "unfollow", id:current_user.id, user_id: @user.id }, class: "background2 follow"%>');
+    <% end %>
+  },function(){
+    $('#follow').html('<strong class="white"><%=@user.name%></strong><b class="white">軍師的個人檔案</b>');
+  });
 </script>
