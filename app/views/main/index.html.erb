@@ -32,8 +32,8 @@ $("#wowslider-container1").wowSlider({effect:"blinds",prev:"",next:"",duration:2
   
           <div class="col-sm-8 col-sm-offset-2 col-md-3 col-md-offset-1">          
             <%= link_to image_tag(conference.photo), conference,  class: 'img-circle' %>
-              <h2><%= conference.title %></h2>
-              <h4><%= conference.happen_date %><h4><br>
+              <h3 class="conference-title"><%= conference.title %></h3>
+              <h5><%= conference.happen_date %><h5><br>
               <ul class="tags" >
               <% conference.tags.each do |tag| %>
                 <li><a class="tag"><%= tag %></a></li>
@@ -57,7 +57,7 @@ $("#wowslider-container1").wowSlider({effect:"blinds",prev:"",next:"",duration:2
 
         <div class="col-sm-8 col-sm-offset-2 col-md-3 col-md-offset-1">          
             <%= link_to image_tag(post.cover_photo), post, class: 'img-circle' %>
-            <h2><%= post.title %></h2>
+            <h3><%= post.title %></h3>
         </div>
       <% end %>
        </div>
