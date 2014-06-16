@@ -121,6 +121,12 @@
 
     <div class="article_content">
         <div class="con_description">
+        <% if current_user %>
+        <% if !current_user.following?(@hearing_conference)%><span><%= button_to "Follow", { action: "follow", hearing_conference_id: @hearing_conference.id, user_id: current_user.id, class: 'btn btn-danger' } %></span><% end %>
+        <% else %>
+        加入後還可以follow此次戰役喔
+        <% end %>
+
             <div class="con_title">
                 會議描述
             </div>

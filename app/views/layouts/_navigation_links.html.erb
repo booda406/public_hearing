@@ -1,44 +1,96 @@
 <%# add navigation links to this file %>
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <style>
 .navbar-text {
   margin: 0 auto;
   top:0px;
 }
-
+.navbar-text:hover{
+  background-color: #4D4D4D;
+  color: #fff;
+}
+.navbar-text:hover a{
+  background-color: #4D4D4D;
+  color: #fff;
+}
 .navbar .nav > li > a {
   min-height: 71px;
   height: 71px;
 }
-
+.navbar-default .navbar-nav > li > a:hover #logo{
+    background-color: #ffffff;
+    color: #ffffff;
+}
 .nav li a {
  padding: 23px 10px 23px 10px;
+ margin: 0 5px 0 5px;
+ height: 71px;
+ font-size: 20px;
 }
-
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    opacity: 1;
+    background-color: #4D4D4D;
+    color: #FFFFFF;
+}
+.navbar-default .navbar-nav > li > a:hover #logo, .navbar-default .navbar-nav > li > a:focus #logo{
+    background-color: transparent;
+}
 .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
  max-height: 71px;
 }
+</style>
 
-</style> 
-
-      <li><%= link_to "公聽會搜尋", search_path %></li>
-      <li><%= link_to "戰況分析", posts_path %></li>
-      <li><%= link_to image_tag('logo.png', id: "logo"), root_path, class: 'navbar-brand' %></li>
-	    <li><%= link_to "消息通報", report_path, id: "report"%></li>
+      <li><a href="/search" id="record"><span class="glyphicon glyphicon-search"></span>前哨站記錄</a></li>
+      <li><a href="/posts" id="post"><span class="glyphicon glyphicon-pencil"></span>戰況分析</a></li>
+      <li><%= link_to image_tag('logo-03.png', id: "logo"), root_path, class: 'navbar-brand' %></li>
+	    <li><a href="/report" id="report"><span class="glyphicon glyphicon-bullhorn"></span>情資回報</a></li>
           
 	  <% if current_user %>
         <p class="navbar-text"><strong><%= link_to current_user.name, user_page_path(current_user.id) %></strong>軍師你好!<br><%= image_tag current_user.image, style: "display:inline-block" %>
         <%= link_to "登出", signout_path, id: "sign_out" %></p>
     <% else %>
-        <li><%= link_to "facebook登入", "/auth/facebook", id: "sign_in" %></li>
+        <li><a href="/auth/facebook" id="sign_in"><i class="fa fa-facebook-square"></i>加入作戰</a></li>
     <% end %>
 
 
 <script>
+$('#record').hover(function(){
+  $('#record').html('<span class="glyphicon glyphicon-search"></span>公聽會搜尋')
+  },function(){
+   $('#record').html('<span class="glyphicon glyphicon-search"></span>前哨站記錄') 
+  }
+);
+$('#post').hover(function(){
+  $('#post').html('<span class="glyphicon glyphicon-pencil"></span>焦點專文')
+  },function(){
+   $('#post').html('<span class="glyphicon glyphicon-pencil"></span>戰況分析') 
+  }
+);
+$('#report').hover(function(){
+  $('#report').html('<span class="glyphicon glyphicon-bullhorn"></span>公聽會回報')
+  },function(){
+   $('#report').html('<span class="glyphicon glyphicon-bullhorn"></span>情資回報') 
+  }
+);
+$('#sign_in').hover(function(){
+  $('#sign_in').html('<i class="fa fa-facebook-square"></i>臉書登入')
+  },function(){
+   $('#sign_in').html('<i class="fa fa-facebook-square"></i>加入作戰') 
+  }
+);
+$( window ).resize(function() {
+  if (window.matchMedia("(min-width:800px)").matches) {
+    /* the view port is at least 400 pixels wide */
+    $("li").css('font-size','20px');
+  } else {
+    /* the view port is less than 400 pixels wide */
+    $("li").css('font-size','14px');
+  }
+});
 var mq = window.matchMedia( "(min-width: 768px)" );
 
 // media query event handler
 if (matchMedia) {
-  var mq = window.matchMedia("(min-width: 768px)");
   mq.addListener(WidthChange);
   WidthChange(mq);
 }
@@ -48,11 +100,11 @@ function WidthChange(mq) {
 
   if (mq.matches) {
     // window width is at least 768px
-      $("#logo").attr("src","<%=asset_path('logo.png')%>");
+      $("#logo").attr("src","<%=asset_path('logo-03.png')%>");
       $("#logo").attr("alt",'');
-      $("#logo").css("padding-top","0px");
+      $("#logo").css("padding-top","5px");
       $(".navbar-collapse").removeAttr('style');
-      $(".navbar-brand").css({"width":"150px","height":"40px","padding":"10px 15px 10px 15px",});
+      $(".navbar-brand").css({"width":"216px","height":"71px","padding":"10px 0px 10px 0px",});
   }
   else {
     // window width is less than 768px
@@ -60,10 +112,10 @@ function WidthChange(mq) {
       $("#logo").attr("alt",'首頁');
       $("#logo").css("padding-top","13px");
       $(".navbar-brand").parent().css("height","40px");
-      $(".navbar-brand").css({"width":"150px","height":"40px","padding":"10px 15px 10px 15px",});
+      $(".navbar-brand").css({"width":"150px","height":"40px","padding":"10px 0px 10px 0px",});
       $(".navbar-collapse").attr("style","max-height: 340px; ");
   }
 
 }
-</script>    
+</script> 
 

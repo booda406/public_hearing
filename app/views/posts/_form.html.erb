@@ -17,11 +17,17 @@
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   
-  </div><div class="field">
+  </div>
+  <div class="field">
     <%= f.label :cover_photo %><br>
     <%= f.file_field :cover_photo %>
   </div>
   
+  <div class="field">
+    <p>給你的文章下一個註解吧～～約20字</p>
+    <%= f.text_field :description %>
+  </div>
+
   <div class="field">
     <%= f.input :content, :as => :ckeditor, :input_html => { :ckeditor => { :height => 400, filebrowserImageBrowseUrl: '/ckeditor/pictures', filebrowserImageUploadUrl: '/ckeditor/pictures' } } %>
   </div>

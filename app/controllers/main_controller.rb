@@ -1,12 +1,16 @@
 class MainController < ApplicationController
 
 	def index
-		@hearingconferences = HearingConference.order('count DESC').limit(4)
-		@posts = Post.order('count DESC').limit(4)
+		@hearingconferences = HearingConference.order('count DESC').limit(3)
+		@posts = Post.order('count DESC').limit(3)
 	end
 
 	def search
-		
+		if params[:order]
+			@hearingconferences = HearingConference.order(params[:order])
+		else
+			@hearingconferences = HearingConference.order('happen_date DESC')
+		end
 	end
 
 	def report
