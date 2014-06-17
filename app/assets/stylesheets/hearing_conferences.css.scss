@@ -1,111 +1,38 @@
 
-
-div.new_html_code {
-      width:950px;
-      height:396px;
-      min-width:150px;
-      min-height:100px;
-      text-align:center;
-      overflow:hidden;
-      display:block;
-      margin: 0 auto;
-  }
-
-div.cell_html_code {
-      width:950px;
-      min-width:150px;
-      min-height:122px;
-      text-align:center;
-      overflow:hidden;
-      display:block;
-      margin: 0 auto;
-  }
-
-
-.carousel-control {
-      border-width: 0px;
-      border-color: rgb(255,255,255);
-      margin: 0px;
-      width: 120px;
+#owl-demo .item{
+    background: #559674;
+    padding: 30px 0px;
+    margin: 5px;
+    color: #FFF;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+    font-family: "Times New Roman";
+    opacity: 1;
+    font-size: 12px;
 }
-
-main {
-      margin: 0;
-      padding: 0;
-} 
-
-.carousel-caption h1 {
-      font-size: 25px;
-      line-height: 30px;
-      color: black;
-}
-
-@media only screen and (max-width: 1024px) {
-   .carousel-control:hover {
-      background: rgba(0,0,0,0.5);
-   }
-}
-
-@media only screen and (max-width: 760px) {
-   .carousel-control:hover {
-      background: rgba(0,0,0,0);
-   }
+.span12 h1 {
+    text-align: center;
 }
 
 
-.session {
-      font-size: 15px;
-      line-height:200%; 
-      color: black;
+.owl-prev {
+    text-align: center;
+    float: left;
+    font-size: 25px;
+    padding: 10px;
 }
 
-.hc_title {
-      font-size: 20px;
-      line-height:150%; 
-      color: black;
+.owl-next {
+    text-align: center;
+    float: right;
+    font-size: 25px;
+    padding: 10px;
 }
 
-.carousel-caption {
-      padding-bottom: 10px;
-      bottom: 100px;
-}
+.owl-next, .owl-prev:hover {
 
-.cell_container {
-      display: table;
-      margin: 0px auto;   
-      padding: 0;
-      padding-bottom: 16px;
-      text-align:center;
-}
-
-.center_cell {
-      margin: 0px auto;
-      padding: 0px auto;
-      text-align:center;
-      height: 250px;
-      margin-top: 30px;
-}
-
-.column {
-      display: table-cell;
-      text-align:center;
-      margin: 0px 14px 0px 14px;
-      padding: 5px 0px 5px 0px;
-      width: 160px;
-      height: 108px;
-}
-
-.column:hover {
-      background: rgba(19,4,19,0.2);
-}
-
-.session.disabled:hover {
-    text-decoration: none;
-}
-
-.hc_title.disabled:hover {
-    text-decoration: none;
-    z-index: 0;
 }
 
 #hc_cover {
@@ -113,7 +40,8 @@ main {
 }
 
 .show_cover { 
-    position: relative; 
+    position: relative;
+    margin-top: 90px;
 }
 
 #hc_cover { 
@@ -128,7 +56,7 @@ main {
     padding: 4px;
     line-height: 100%; 
     text-align: left;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 .mask {
@@ -158,6 +86,7 @@ main {
     font-size: 18px;
     font-style: italic;
     width: 45%;
+    height: 36px;
   }
 
 .place {
@@ -168,6 +97,7 @@ main {
     font-size: 18px;
     font-style: italic;
     width: 45%;
+    height: 36px;
   }
 
 .chairman {
@@ -178,6 +108,7 @@ main {
     font-size: 18px;
     font-style: italic;
     width: 45%;
+    height: 36px;
   }
 
 .organizer {
@@ -188,6 +119,7 @@ main {
     font-size: 18px;
     font-style: italic;
     width: 45%;
+    height: 36px;
   }
 
 .keyword {
@@ -198,30 +130,49 @@ main {
     font-size: 18px;
     font-style: italic;
     width: 45%;
+    height: 36px;
 }
 
+.keyword a {
+  color: white;
+}
+
+@media only screen and (max-width: 1000px) {
+   .when, .place, .chairman, .organizer, .keyword {
+    font-size: 7px;
+            line-height: 12px;
+
+   }
+}
 
 @media only screen and (max-width: 760px) {
    .when, .place, .chairman, .organizer, .keyword {
-    font-size: 7px;
+    font-size: 6px;
+        line-height: 12px;
+
    }
 }
 
 @media only screen and (max-width: 540px) {
    .when, .place, .chairman, .organizer, .keyword {
-    font-size: 6px;
+    font-size: 5px;
+        line-height: 6px;
+
    }
 }
 
 @media only screen and (max-width: 480px) {
    .when, .place, .chairman, .organizer, .keyword {
-    font-size: 5px;
+    font-size: 4px;
+        line-height: 6px;
+
    }
 }
 
 @media only screen and (max-width: 300px) {
    .when, .place, .chairman, .organizer, .keyword {
-    font-size: 4px;
+    font-size: 3px;
+    line-height: 6px;
    }
 }
 
@@ -335,7 +286,7 @@ main {
       height: 80px;
       border-bottom:1px solid;
       border-color: rgba(0,0,0,0.4);
-      overflow: hidden;
+      overflow: scroll;
 }
 
 
@@ -382,6 +333,7 @@ main {
     clear: both;
     height: 80%;
     background: #fff;
+    font-size: 18px;
 }
 
 .circle {
@@ -389,7 +341,8 @@ main {
   font-size: 23px;
   border-radius: 50%;
   width: 50px;
-  height: 50px; 
+  height: 50px;
+  float: left; 
   /* width and height can be anything, as long as they're equal */
 }
 
@@ -403,6 +356,7 @@ main {
   width: 30px;
   height: 30px;
   background: #970012;
+  color: white;
 }
 
 #img_button {
@@ -413,9 +367,10 @@ main {
 
 #folder {
   clear: both;
-  width: 750px;
+  width: 80%;
   padding: 10px;
   float: left;
+  text-align: center;
 }
 
 .fold {
@@ -424,7 +379,7 @@ main {
   background: -o-linear-gradient(top, rgba(95,147,157,1), #4C737D);
   background: linear-gradient(top, rgba(95,147,157,1), #4C737D);
   padding: 5px;
-  width: 750px;
+  width: 80%;
   height: 80px;
   color: #fff;
   font-size: 15px;
@@ -432,6 +387,8 @@ main {
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
   transition: all 0.3s linear;
+  margin-left: 10%;
+  overflow: scroll;
 }
 
 
@@ -449,9 +406,10 @@ main {
   text-transform: uppercase;
   border-radius: 10px;
   padding: 15px;
-  width: 750px;
+  width: 80%;
   height: 60px;
   max-width: 120%;
+  overflow: scroll;
 }
 
 #toggle:checked ~ #toggle-label{
@@ -467,17 +425,19 @@ main {
 
 #toggle:checked ~ .fold:nth-child(even) {
   margin-top: -84px;
-    -webkit-transform: perspective(800px) rotateX(80deg); 
+  -webkit-transform: perspective(800px) rotateX(80deg); 
   -moz-transform: perspective(800px) rotateX(80deg); 
   transform: perspective(800px) rotateX(80deg);
 }
 
 #folder2 {
   clear: both;
-  width: 750px;
+  width: 80%;
   padding: 10px;
   padding:0 auto;
   margin:0 auto;
+  text-align: center;
+
 }
 
 .fold2 {
@@ -486,7 +446,7 @@ main {
   background: -o-linear-gradient(top, rgba(95,147,157,1), #4C737D);
   background: linear-gradient(top, rgba(95,147,157,1), #4C737D);
   padding: 10px;
-  width: 750px;
+  width: 80%;
   height: 80px;
   font-size: 15px;
   line-height: 18px;
@@ -494,6 +454,8 @@ main {
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
   transition: all 0.3s linear;
+  margin-left: 10%;
+  overflow: scroll;
 }
 
 
@@ -511,9 +473,10 @@ main {
   text-transform: uppercase;
   border-radius: 10px;
   padding: 15px;
-  width: 750px;
+  width: 80%;
   height: 60px;
   max-width: 120%;
+  overflow: scroll;
 }
 
 #toggle2:checked ~ #toggle-label2{
@@ -529,7 +492,7 @@ main {
 
 #toggle2:checked ~ .fold2:nth-child(even) {
   margin-top: -84px;
-    -webkit-transform: perspective(800px) rotateX(80deg); 
+  -webkit-transform: perspective(800px) rotateX(80deg); 
   -moz-transform: perspective(800px) rotateX(80deg); 
   transform: perspective(800px) rotateX(80deg);
 }
@@ -538,9 +501,10 @@ main {
 
 #folder3 {
   clear: both;
-  width: 750px;
+  width: 80%;
   padding: 10px;
   float: right;
+  text-align: center;
 
 }
 
@@ -550,7 +514,7 @@ main {
   background: -o-linear-gradient(top, rgba(95,147,157,1), #4C737D);
   background: linear-gradient(top, rgba(95,147,157,1), #4C737D);
   padding: 10px;
-  width: 750px;
+  width: 80%;
   height: 80px;
   color: #000;
   font-size: 15px;
@@ -558,6 +522,9 @@ main {
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
   transition: all 0.3s linear;
+  margin-left: 10%;
+  overflow: scroll;
+
 }
 
 
@@ -574,9 +541,10 @@ main {
   text-transform: uppercase;
   border-radius: 10px;
   padding: 15px;
-  width: 750px;
+  width: 80%;
   height: 60px;
   max-width: 120%;
+  overflow: scroll;
 }
 
 #toggle3:checked ~ #toggle-label3{
@@ -601,7 +569,65 @@ main {
   width: 90%;
   padding:0 auto;
   margin:0 auto;
-  overflow: hidden;
+}
+
+@media only screen and (max-width: 860px) {
+
+      #toggle:checked ~ .fold:nth-child(odd) {
+        margin-top: -82px;
+        -webkit-transform: perspective(800px) rotateX(-80deg); 
+        -moz-transform: perspective(800px) rotateX(-80deg); 
+        transform: perspective(800px) rotateX(-80deg);
+        display: none;
+      }
+
+      #toggle:checked ~ .fold:nth-child(even) {
+        margin-top: -84px;
+          -webkit-transform: perspective(800px) rotateX(80deg); 
+        -moz-transform: perspective(800px) rotateX(80deg); 
+        transform: perspective(800px) rotateX(80deg);
+         display: none;
+      }
+
+      #toggle2:checked ~ .fold2:nth-child(odd) {
+      margin-top: -82px;
+      -webkit-transform: perspective(800px) rotateX(-80deg); 
+      -moz-transform: perspective(800px) rotateX(-80deg); 
+      transform: perspective(800px) rotateX(-80deg);
+        display: none;
+     }
+
+    #toggle2:checked ~ .fold2:nth-child(even) {
+      margin-top: -84px;
+        -webkit-transform: perspective(800px) rotateX(80deg); 
+      -moz-transform: perspective(800px) rotateX(80deg); 
+      transform: perspective(800px) rotateX(80deg);
+      display: none;
+    }
+
+    #toggle3:checked ~ .fold3:nth-child(odd) {
+    margin-top: -82px;
+    -webkit-transform: perspective(800px) rotateX(-80deg); 
+    -moz-transform: perspective(800px) rotateX(-80deg); 
+    transform: perspective(800px) rotateX(-80deg);
+    display: none;
+    }
+     #toggle3:checked ~ .fold3:nth-child(even) {
+    margin-top: -84px;
+    -webkit-transform: perspective(800px) rotateX(80deg); 
+    -moz-transform: perspective(800px) rotateX(80deg); 
+    transform: perspective(800px) rotateX(80deg);
+    display: none;
+    }
+    #toggle-label {
+        font-size: 18px;
+    }
+    #toggle-label2 {
+        font-size: 18px;
+    }
+    #toggle-label3 {
+        font-size: 18px;
+    }
 }
 
 

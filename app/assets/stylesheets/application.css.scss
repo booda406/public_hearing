@@ -17,6 +17,8 @@
  *= require report
  *= require scaffolds
  *= require search
+ *= require owl.carousel
+ *= require prettify
  *= require style
  *= require style.mod
  *= require_self
@@ -62,4 +64,7 @@
 }
 .navbar{
   border-top: 5px solid #B70030;
+}
+.row{
+  margin: 50px 50px 50px 50px;
 }

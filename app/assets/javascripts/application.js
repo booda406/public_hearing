@@ -17,6 +17,12 @@
 //= require bootstrap-tagsinput
 //= require ckeditor/override
 //= require ckeditor/init
+//= require owl.carousel
+//= require app
+//= require prettify
+//= require bootstrap-collapse
+//= require bootstrap-tab
+//= require bootstrap-transition
 //= require_tree ./ckeditor
 //= require_tree ./wowslider
 //= require turbolinks

@@ -1,94 +1,76 @@
 
-  <!-- Carousel
-    ================================================== -->
-    <div id="myCarousel" class="carousel slide">
-        <div class="carousel-inner">
-            <div class="item active">
-                <div class="container">
-                    <div class="new_html_code"></div>
-                    <div class="carousel-caption">
-                        <h1>臭臭臭臭臭臭臭臭臭臭臭臭臭臭臭紹祥.</h1>
-                        <!-- <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> -->
-                        <a class="btn btn-large btn-primary" href="#">Tagㄇ</a>
-                    </div>
-                </div>
 
-            </div>
-            <div class="item">
-                <!-- <img src="http://splashmagazine.com/wp-content/uploads/2013/03/Crisp-simple-bootstrap-templates.jpg" alt=""> -->
-                <div class="container">
-                    <div class="cell_container">
-                        <div class="cell_html_code"></div>
-                        <div class="center_cell">
-                        <div class="column">
-                            <a href="">
-                                <div class="session">第一場</div>
-                                <div class="hc_title">早安</div>
-                            </a>
-                        </div>
-                        <div class="column">
-                            <a href="">
-                                <div class="session">第一場</div>
-                                <div class="hc_title">紹祥家的燈好漂亮</div>
-                            </a>
-                        </div>
-                        <div class="column">
-                            <a href="">
-                                <div class="session">第一場</div>
-                                <div class="hc_title">被蚊子咬了三的包～～</div>
-                            </a>
-                        </div>
-                        <div class="column">
-                            <a href="">
-                                <div class="session">第一場</div>
-                                <div class="hc_title">紹祥愛唱歌拉拉拉拉拉拉</div>
-                            </a>
-                        </div>
-                        <div class="column">
-                            <a href="">
-                                <div class="session">第一場</div>
-                                <div class="hc_title">肚子二了等一下要吃東西</div>
-                            </a>
-                        </div>
-                        <div class="column">
-                            <a href="">
-                                <div class="session">第一場</div>
-                                <div class="hc_title">嗚嗚嗚嗚嗚嗚嗚唧唧唧唧唧唧ㄐㄧ</div>
-                            </a>
-                        </div>
-                        <div class="column">
-                            <a href="">
-                                <div class="session">第一場</div>
-                                <div class="hc_title">逼逼逼逼逼憋波波波波波</div>
-                            </a>
-                        </div>
-                        <div class="column">
-                            <a href="">
-                                <div class="session">第一場</div>
-                                <div class="hc_title">電腦燙燙ㄉ</div>
-                            </a>
-                        </div>
-                        <div class="column">
-                            <a href="">
-                                <div class="session">第一場</div>
-                                <div class="hc_title">(｀∇´)ψψ(｀∇´)ψψ(｀∇´)ψ</div>
-                            </a>
-                        </div>
-                        <div class="column">
-                            <a href="">
-                                <div class="session">第一場</div>
-                                <div class="hc_title">ψOψOψOψ</div>
-                            </a>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+ <!-- Demo -->
+
+    <script>
+    $(document).ready(function() {
+
+      var owl = $("#owl-demo");
+
+      owl.owlCarousel({
+
+        // Define custom and unlimited items depending from the width
+        // If this option is set, itemsDeskop, itemsDesktopSmall, itemsTablet, itemsMobile etc. are disabled
+        // For better preview, order the arrays by screen size, but it's not mandatory
+        // Don't forget to include the lowest available screen size, otherwise it will take the default one for screens lower than lowest available.
+        // In the example there is dimension with 0 with which cover screens between 0 and 450px
+        
+        itemsCustom : [
+          [0, 2],
+          [450, 4],
+          [600, 7],
+          [700, 9],
+          [1000, 10],
+          [1200, 12],
+          [1400, 13],
+          [1600, 15]
+        ],
+        navigation : true
+
+      });
+
+
+
+    });
+    </script>
+
+
+  <!-- Slide
+    ================================================== -->
+    <div class="slide">   
+ 
+    <div id="title">
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <h1>「海峽兩岸服務貿易協議」公聽會（第一場）<br>─ 貿易協定、租車、貨運等運輸業</h1>
+          </div>
         </div>
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+      </div>
     </div>
-    <!-- /.carousel -->
+
+      <div id="demo">
+        <div id="owl-demo" class="owl-carousel owl-theme">
+          
+          <div class="item"><h4>第二場<h4><h4>海運、公路運輸</h4></div>
+          <div class="item"><h4>第三場<h4><h4>醫療、技術檢測與分析服務業、社會服務業、醫療器材</h4></div>
+          <div class="item"><h4>第四場<h4><h4>第二類電信、娛樂服務業、電影或錄影帶行銷</h4></div>
+          <div class="item"><h4>第五場<h4><h4>銀行、金融業</h4></div>
+          <div class="item"><h4>第六場<h4><h4>證券、期貨及其相關服務業</h4></div>
+          <div class="item"><h4>第七場<h4><h4>快遞、空運、貨物集散與承攬</h4></div>
+          <div class="item"><h4>第八場<h4><h4>旅館、旅行社及旅遊服務、遊樂園、空中纜車</h4></div>
+          <div class="item"><h4>第九場<h4><h4>管理顧問、翻譯傳譯、洗衣染色、美髮美容</h4></div>
+          <div class="item"><h4>第十場<h4><h4>資訊業、租賃業(航空器.機器及設備)、線上遊戲</h4></div>
+          <div class="item"><h4>第十一場<h4><h4>畜牧業、營建業、保險、殯儀館</h4></div>
+          <div class="item"><h4>第十二場<h4><h4>批發業、零售業、經銷、食物及飲料提供</h4></div>
+          <div class="item"><h4>第十三場<h4><h4>廣告服務、市場研究、複製服務、郵寄名單編輯</h4></div>
+          <div class="item"><h4>第十四場<h4><h4>攝影業、包裝服務、印刷相關服務、展覽服務</h4></div>
+          <div class="item"><h4>第十五場<h4><h4>技術檢測與分析、建築物清理、環境服務</h4></div>
+
+        </div>
+    </div>
+
+    <!-- /.slide -->
 
     <!-- Head Picture
         ================================================== -->
@@ -97,19 +79,19 @@
         <%=image_tag('hc_cover.jpg', id: "hc_cover") %>
         <div class="mask"></div>
                 <div class="when">Time
-                        fooooo
+                        102年9月30日（星期一）9時1分至12時5分
                 </div>
                 <div class="place"> Place 
-                        fooooo
+                        紅樓202會議室
                 </div>
                 <div class="chairman">Chairman 
-                        fooooo
+                        張委員慶忠
                 </div>
                 <div class="organizer">Organizer 
-                        fooooo
+                        內政委員會
                 </div>
                 <div class="keyword">Keyword 
-                        fooooo
+                        <a>#服貿</a> <a>#張憲忠</a> <a>#公聽會</a> <a>#貨運</a> <a>#運輸業</a> 
                 </div>
 
       </div>
@@ -228,19 +210,19 @@
         <div class="question_border">政府給問嗎？</div>
         <div class="question_content">
             <div id="circle1" class="circle">Q</div>
-
+         為什麼只列「投資人如為大陸地區軍方投資或具有軍事目的之企業者，主管機關將限制其來台投資」，卻將中共黨、政、特務部門排除在外？
         </div>
         <div class="question_content">
             <div id="circle1" class="circle">Q</div>
-
+         兩岸勞工政策不同，中資來台社服務業派來專門經理人來管理，由於台灣是多元社會勞工的社會，工作條件、人員管理與大陸不同，該如何進行應對？
         </div>
         <div class="question_content">
             <div id="circle2" class="circle">A</div>
-
+         目前尚無回答。
         </div>
         <div class="question_content">
             <div id="circle1" class="circle">Q</div>
-
+         為什麼只列「投資人如為大陸地區軍方投資或具有軍事目的之企業者，主管機關將限制其來台投資」，卻將中共黨、政、特務部門排除在外？
         </div>
         <div class="question_border"></div>
     </div>
@@ -274,21 +256,14 @@
                     web is going to finish ya :D
                     </div>
                     <div class="fold2">
-                    :DDDDDDDDDDDDDDDDDDDDDD
+                    :DDDDDDDDDD
                     </div>
                     <div class="fold2">
                     Element 5
                     </div>
                 </div>
 
-        <!--          <div id="folder">
-                      <input type="checkbox" id="toggle"/> <label for="toggle" id="toggle-label">交通部范植谷次長 贊成</label>
-                        <div class="fold">
-                        主席、各位委員。針對剛才各位的發言，本人分幾點說明。
-                        </div>
-                    </div>
-        -->
-
+    
 
                 <div id="folder">
                   <input type="checkbox" id="toggle"/> <label for="toggle" id="toggle-label">交通部范植谷次長 <u>贊成</u></label>
@@ -361,4 +336,33 @@
     }
     });
 
+    $(function(){
+    window.prettyPrint && prettyPrint();
+    }(window.jQuery));
+
+    jQuery(document).ready(function($) {
+
+        //Download Link Highlight
+        if($("body").data("page")==="frontpage"){
+            $(window).scroll(function(){
+                var scrolled = $(window).scrollTop();
+                var downloadLink = $("#top-nav").find(".download")
+                if(scrolled >= 420){
+                    downloadLink.addClass("download-on");
+                } else if (scrolled < 420){
+                    downloadLink.removeClass("download-on");
+                }
+            })
+        }
+
+        $('#myTab a').click(function (e) {
+          e.preventDefault();
+          $(this).tab('show');
+        })
+
+
+    });
+
+
 </script>
+
