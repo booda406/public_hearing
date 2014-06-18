@@ -103,11 +103,11 @@
 
     <div class="article_content">
         <div class="con_description">
-        <% if current_user %>
+         <div><% if current_user %>
         <% if !current_user.following?(@hearing_conference)%><span><%= button_to "Follow", { action: "follow", hearing_conference_id: @hearing_conference.id, user_id: current_user.id, class: 'btn btn-danger' } %></span><% end %>
         <% else %>
         加入後還可以follow此次戰役喔
-        <% end %>
+        <% end %></div>
 
             <div class="con_title">
                 會議描述
@@ -244,74 +244,82 @@
         <div id="all_folder">
 
                 <div id="folder2">
-                  <input type="checkbox" id="toggle2"/> <label for="toggle2" id="toggle-label2"><u>其他</u>  主席張慶忠的程序問題</label>
+                  <input type="checkbox" checked  id="toggle2"/> <label for="toggle2" id="toggle-label2"><u>其他</u>  主席張慶忠的程序問題</label>
          
                     <div class="fold2">
-                    Nice to meet you!
+                    現在開始開會，今天是有關服貿協議的第一場公聽會，我們非常歡迎並感謝各位專家學者、政府官員及業者、委員參加今天的公聽會，本公聽會是根據立法院職權行使法第九章第五十四條至第五十九條的規定辦理的。自從ECFA簽訂以後，兩岸為促進服務貿易自由化，海基和海峽兩會在本年6月21日簽署了海峽兩岸服務貿易協議，行政院在6月27日將本協議送到本院。本協議簽署以後，社會上有不同的看法，對台灣整體經濟到底會有什麼影響？
                     </div>
-                    <div class="fold2">
-                    紹祥唱老歌ㄏㄏ 
+                    <div class="fold2"  >
+                    對台灣和其他國家的區域性整合有什麼助益或是影響？對台灣各種產業有什麼影響？大家都非常關切。會不會因此開放大陸勞工來台工作？會不會對中小企業有不利的影響？這些都是大家的疑慮。全民更關切的是，這個協議能不能增加台灣人民的就業？萬一對產業有影響，政府有沒有配套的措施？ 
                     </div>
-                    <div class="fold2">
-                    web is going to finish ya :D
+                    <div class="fold2"  >
+                    爰此，本院第3會期第2次臨時會第一次院會決定，本協議交由內政等8個委員會審查。本會在臨時會期間已召開過4場公聽會，廣邀各界人士參與，聽取各界的意見。另外，本院在8月5日朝野協商特別指定由內政委員會召開16場公聽會，由本席及段委員宜康抽籤決定各召開8場，今天是本席輪值召委，召開第一場公聽會。
                     </div>
-                    <div class="fold2">
-                    :DDDDDDDDDD
+                    <div class="fold2"  >
+                    各位專家學者在這個領域深入研究，希望能提供專精的學識；業者及政府代表則有豐富的實務經驗。對於各位的高見，我們會詳細紀錄並列入公報，作為將來審查時的重要參考。
                     </div>
-                    <div class="fold2">
-                    Element 5
+                    <div class="fold2"  >
+                    今天我們列出6項簡單的題綱，只是拋磚引玉，不會限制各位發言的內容及思考的方向，請大家儘量發揮。換言之，這些題綱是提供各位參考，希望各位儘量表達看法和意見，我們都非常歡迎。現在介紹與會人員……
                     </div>
                 </div>
+                
+                <div id="folder3">
+                  <label id="toggle-label3"><u>反對</u>  李委員俊俋 （在席位上）程序問題。</label>
+         
+                </div>
 
-    
+
+                <div id="folder2">
+                   <label id="toggle-label2"><u>其他</u>  主席：有什麼程序問題？</label>
+         
+                </div>
+
+                <div id="folder3">
+                   <label id="toggle-label3"><u>反對</u>  （在席位上）李委員俊俋：會議詢問總可以吧？主席應優先處理。</label>
+         
+                </div>
+
 
                 <div id="folder">
-                  <input type="checkbox" id="toggle"/> <label for="toggle" id="toggle-label">交通部范植谷次長 <u>贊成</u></label>
+                  <input type="checkbox" checked id="toggle"/> <label for="toggle" id="toggle-label">交通部范植谷次長 <u>贊成</u></label>
          
-                    <div class="fold">
+                    <div class="fold"  >
                     主席、各位委員。針對剛才各位的發言，本人分幾點說明。
                     </div>
-                    <div class="fold">
+                    <div class="fold"  >
                     首先，有一點必須強調，之前王主委與林董事長已經說過，本場公聽會所討論的幾個行業別的開放項目，已於98年及101年開放，到目前為止，尚未有陸資前來投資。
                     </div>
-                    <div class="fold">
+                    <div class="fold"  >
                     其次，就我方開放陸資，與陸資開放我方而言，均需基於對等、公平及互惠等原則。剛才小客車租賃業代表提到兩岸駕照互通問題，目前我們已經循小兩會方式，透過兩岸溝通機制，洽請海基會查告陸方有關臨時駕駛證之相關規定及實務執行情形。在相關資料拿到後，交通部將在陸委會及相關機關協助下，依照平等、互惠原則研議互惠使用辦法
                     </div>
-                    <div class="fold">
+                    <div class="fold"  >
                     至於路線貨運公會及貨櫃貨運公會所提問題，在此我一併說明如下。有關貨運三業，汽車貨運業、路線貨運業及貨櫃貨運業的分業問題，交通部早於去年要求運研所對該三項行業之分業問題，提出提升改善與加強競爭力方案，當中包括分業檢討在內。除傳統三業外，尚有物流業，這也是貨運業的一種新發展趨勢，因此我們已經要求運研所對於該三項行業，與相關新的發展趨勢進行檢討。
                     </div>
-                    <div class="fold">
+                    <div class="fold"  >
                     另外，剛才有人提到路線貨運業的家數限制問題。基本上，一般貨運業市場是個完全競爭市場，因此，這部分是否需要有家數限制？我認為不大可能。不過路線貨運業將來是否還是維持？這畢竟是一個寡占市場，所以這點是可以討論的。
                     </div>
-                    <div class="fold">
+                    <div class="fold"  >
                     對於所有的開放項目，本部除委由運研所就業別與政策面進行研議外，也會繼續加強辦理與產業公會或工會的溝通、協商，如涉及法令鬆綁或法規修正，以及如何強化本國業者競爭力等問題，我們會請公路總局儘速、密集地召開溝通說明會，同時也歡迎所有工會團體參與。            
                     </div>
-                    <div class="fold">
+                    <div class="fold"  >
                     以上報告，敬請指教，謝謝。
                     </div>
                 </div>
 
                 <div id="folder3">
-                  <input type="checkbox" id="toggle3"/> <label for="toggle3" id="toggle-label3"><u>反對</u> 臺灣省汽車路線貨運商業同業公會聯合會陳耀昌秘書長</label>
+                  <input type="checkbox" checked id="toggle3"/> <label for="toggle3" id="toggle-label3"><u>反對</u> 臺灣省汽車路線貨運商業同業公會聯合會陳耀昌秘書長</label>
          
-                    <div class="fold3">
-                    Element 1
+                    <div class="fold3"  >
+                    許委員忠信：主席、各位同仁。這次公聽會是16場公聽會的第一場，我們要公聽會，但是不要草率。現在有8場公聽會竟然在3天內排完，而且還排到晚上，公聽會所邀請的工會和公會也不符合8月5日黨團協商第4項的要求。當時的第4項要求是，這16場公聽會每場要有4個服務項目開放，邀集各產業工會和公會的代表參加，方可進行實質審查。但是現在我們看到所邀請的學者專家只有5位到場，很顯然沒有符合朝野協商的要求。
                     </div>
-                    <div class="fold3">
-                    Element 2
+                    <div class="fold3"  >
+                    在時間上，竟然利用晚上召開公聽會，讓業者、學者專家和本會委員都非常不方便，違反了議事規則。台聯黨團要求進行協商，如果主席不進行協商，本席將要求台聯黨3位委員來杯葛議事，今天就無法進行第一場的公聽會。總之，我們要求張召委針對這8場為何要如此密集？這樣做是否適當？進行朝野協商，謝謝。
+
                     </div>
-                    <div class="fold3">
-                    Element 3
-                    </div>
-                    <div class="fold3">
-                    Element 4
-                    </div>
-                    <div class="fold3">
-                    Element 5
-                    </div>
+                  
                 </div>
 
-        
+
         </div>
 
     </div>
@@ -324,17 +332,18 @@
     $("#close_article").click(function() {
     if ($(this).attr("src") == "/assets/close_article.png") {
           $("#close_article").attr("src","<%=asset_path('open_article.png')%>");
-        document.getElementById("toggle").checked = true;
-        document.getElementById("toggle2").checked = true;
-        document.getElementById("toggle3").checked = true;
-    }
-    else {  
-        $("#close_article").attr("src","<%=asset_path('close_article.png')%>");
         document.getElementById("toggle").checked = false;
         document.getElementById("toggle2").checked = false;
         document.getElementById("toggle3").checked = false;
     }
+    else {  
+        $("#close_article").attr("src","<%=asset_path('close_article.png')%>");
+        document.getElementById("toggle").checked = true;
+        document.getElementById("toggle2").checked = true;
+        document.getElementById("toggle3").checked = true;
+    }
     });
+
 
     $(function(){
     window.prettyPrint && prettyPrint();
@@ -361,6 +370,14 @@
         })
 
 
+    });
+
+    $( window ).resize(function() {
+      if (window.matchMedia("(min-width:760px)").matches) {
+        $(".mask").show();
+      } else {
+        $(".mask").hide();
+      }
     });
 
 

@@ -66,7 +66,7 @@
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
     filter: alpha(opacity=50);
     width: 40%;
-    height: 65%;
+    height: 75%;
     opacity: 0.7;
   }
 
@@ -91,7 +91,7 @@
 
 .place {
     text-indent: 1em;
-    margin-top: 9%;
+    margin-top: 10%;
     z-index: 3;
     color: white;
     font-size: 18px;
@@ -102,7 +102,7 @@
 
 .chairman {
     text-indent: 1em;
-    margin-top: 13%;
+    margin-top: 15%;
     z-index: 3;
     color: white;
     font-size: 18px;
@@ -113,7 +113,7 @@
 
 .organizer {
     text-indent: 1em;
-    margin-top: 17%;
+    margin-top: 20%;
     z-index: 3;
     color: white;
     font-size: 18px;
@@ -124,7 +124,7 @@
 
 .keyword {
     text-indent: 1em;
-    margin-top: 21%;
+    margin-top: 25%;
     z-index: 3;
     color: white;
     font-size: 18px;
@@ -139,39 +139,38 @@
 
 @media only screen and (max-width: 1000px) {
    .when, .place, .chairman, .organizer, .keyword {
-    font-size: 7px;
-            line-height: 12px;
-
+    font-size: 13px;
+    line-height: 12px;
    }
 }
 
 @media only screen and (max-width: 760px) {
    .when, .place, .chairman, .organizer, .keyword {
-    font-size: 6px;
-        line-height: 12px;
-
+    font-size: 11px;
+    line-height: 8px;
+   }
+   .when {
+    margin-top: 3%;
    }
 }
 
 @media only screen and (max-width: 540px) {
    .when, .place, .chairman, .organizer, .keyword {
-    font-size: 5px;
-        line-height: 6px;
-
+    font-size: 9px;
+    line-height: 7px;
    }
 }
 
 @media only screen and (max-width: 480px) {
    .when, .place, .chairman, .organizer, .keyword {
-    font-size: 4px;
-        line-height: 6px;
-
+    font-size: 7px;
+    line-height: 6px;
    }
 }
 
 @media only screen and (max-width: 300px) {
    .when, .place, .chairman, .organizer, .keyword {
-    font-size: 3px;
+    font-size: 5px;
     line-height: 6px;
    }
 }
@@ -193,7 +192,8 @@
 .con_content {
     padding-left: 10%;
     padding-right: 10%;
-    font-size: 15px;
+    font-size: 17px;
+    line-height: 23px;
 }
 
 
@@ -307,8 +307,8 @@
     font-size: 25px;
     text-align: center;
     color: #fff;
-    padding-top: 80px;
-    height: 120%;
+    padding-top: 50px;
+    height: 100%;
     clear: both;
     background: #970012;
     line-height: 50px;
@@ -368,7 +368,6 @@
 #folder {
   clear: both;
   width: 80%;
-  padding: 10px;
   float: left;
   text-align: center;
 }
@@ -400,7 +399,7 @@
   cursor: pointer;
   margin-bottom: 0px;
   border: 1px solid #e5e5e5;
-  font-size: 25px;
+  font-size: 20px;
   color: #fff;
   background: #6e9ca7;
   text-transform: uppercase;
@@ -413,7 +412,9 @@
 }
 
 #toggle:checked ~ #toggle-label{
-  margin-bottom: 60px;
+  margin-bottom: 20px;
+  z-index: 1;
+  position: relative;
 }
 
 #toggle:checked ~ .fold:nth-child(odd) {
@@ -433,7 +434,7 @@
 #folder2 {
   clear: both;
   width: 80%;
-  padding: 10px;
+  // padding: 10px;
   padding:0 auto;
   margin:0 auto;
   text-align: center;
@@ -467,7 +468,7 @@
   cursor: pointer;
   margin-bottom: 0px;
   border: 1px solid #e5e5e5;
-  font-size: 25px;
+  font-size: 20px;
   color: #000;
   background: #edd983;
   text-transform: uppercase;
@@ -480,7 +481,9 @@
 }
 
 #toggle2:checked ~ #toggle-label2{
-  margin-bottom: 60px;
+  margin-bottom: 20px;
+  z-index: 1;
+  position: relative;
 }
 
 #toggle2:checked ~ .fold2:nth-child(odd) {
@@ -496,13 +499,11 @@
   -moz-transform: perspective(800px) rotateX(80deg); 
   transform: perspective(800px) rotateX(80deg);
 }
-
  
 
 #folder3 {
   clear: both;
   width: 80%;
-  padding: 10px;
   float: right;
   text-align: center;
 
@@ -524,7 +525,6 @@
   transition: all 0.3s linear;
   margin-left: 10%;
   overflow: scroll;
-
 }
 
 
@@ -535,9 +535,9 @@
   cursor: pointer;
   margin-bottom: 0px;
   border: 1px solid #e5e5e5;
-  font-size: 25px;
+  font-size: 20px;
   color: #000;
-  background: rgba(178,0,21,0.6);
+  background: rgba(178,0,21,0.9);
   text-transform: uppercase;
   border-radius: 10px;
   padding: 15px;
@@ -548,7 +548,9 @@
 }
 
 #toggle3:checked ~ #toggle-label3{
-  margin-bottom: 60px;
+  margin-bottom: 20px;
+  z-index: 1;
+  position: relative;
 }
 
 #toggle3:checked ~ .fold3:nth-child(odd) {
